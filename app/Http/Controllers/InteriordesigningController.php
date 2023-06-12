@@ -1,0 +1,63 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\Models\InteriorDesigning;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+use App\Models\File;
+
+
+class InteriordesigningController extends Controller
+{
+    //
+    // public function uploadInteriorDesigning(Request $request){
+    //     $user=auth()->user();
+    //     $interiordesigning=new InteriorDesigning();
+    //     $interiordesigning->project_name =$request->project_name;
+    //     $interiordesigning->details =$request->details;
+    //     if ($request->hasfile('image')) {
+    //         $file =$request->file('image');
+    //         $extension = $file->getClientOriginalExtension(); // getting image extens
+    //         $filename=time() . '.' . $extension;
+    //         $file->move('uploads/',$filename);
+    //         $interiordesigning->image=$filename;
+    //        } else {
+    //         return $request;
+    //         $interiordesigning->image='';
+    //        }
+    //       $interiordesigning->save();
+    //       return redirect()->back()->with('success', 'Data has been saved successfully.');
+    // }
+    public function uploadInteriorDesigning(Request $request)
+    {
+        $image = array ();
+            if($files = $request->file('image' )){
+            foreach ($files as $file) {
+            $image_name = md5(rand (1000, 10000));
+            $ext = strtolower ($file->getClientOriginalExtension ());
+            $image_full_name = $image_name. '. ' .$ext;
+            $upload_path = 'uploads/';
+            $image_url = $upload_path. $image_full_name;
+            $file->move($upload_path, $image_full_name);
+            $image[] = $image_url;
+        }
+    }
+    InteriorDesigning::insert([
+        'image' => implode('|', $image),
+        'project_name'=>$request->project_name,
+        'details'=>$request->details,
+    ]);
+        return back() ;
+    }
+
+    public function getInteriorDesigning(){
+        $data= InteriorDesigning::All();
+       // where('category','architecture')->get();
+        return view('interiordesigning',['data'=>$data]);
+        //return DB::select ("select * from services");
+      }
+
+
+}
