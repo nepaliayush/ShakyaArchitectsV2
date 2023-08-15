@@ -98,13 +98,25 @@ span{
   
 @media(max-width:450px){
   .nav{
-    height: 120px;
+    height: 100px;
   }
   .nav-logo{
-    width: 20vw;
+
+    margin-top: 0px;
+    background-color: red;
+    width: 0px;
+    
+  }
+  .nav-logo img{
+    height: 15vw;
+    width: 18vw;
   }
   .nav-text{
-   padding:10px ;
+    
+    margin-top: 4vw;
+    margin-left:26vw;
+   padding:0px ;
+   
   }
   .nav-text span{
     /* margin: 10% 0% 0% 0%; */

@@ -26,6 +26,10 @@ Route::get('/', function () {
 });
 Route::get('helo', function () {
     return view('helo');
+
+});
+Route::get('projectgallery', function () {
+    return view('projectgallery');
 });
 Route::get('dashboard', function () {
     return view('dashboard');
@@ -81,9 +85,9 @@ Route::group(['middleware'=>"web"],function(){
     Route::get('editbooking/{id}', [BookingController::class, 'edit'])->name('edit');
     Route::put('/updatebooking/{id}', [BookingController::class, 'updateBooking'])->name('update');
     Route::get('/architecture/', [ArchitectureController::class, 'getArchitecture'])->name('image');
-    Route::get('/interiordesigning/', [InteriorDesigningController::class, 'getInteriorDesigning'])->name('image');
+    Route::get('/interiordesigning/', [InteriorDesigningController::class, 'getThumbnail'])->name('image');
     Route::get('/sanitary/', [SanitaryController::class, 'getSanitary'])->name('image');
-
+    Route::get('/projectgallery/', [InteriorDesigningController::class, 'getInteriorDesigning'])->name('image');
     
 
 

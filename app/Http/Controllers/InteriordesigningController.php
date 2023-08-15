@@ -32,6 +32,18 @@ class InteriordesigningController extends Controller
     // }
     public function uploadInteriorDesigning(Request $request)
     {
+        $thumbnail = array();
+        if ($files = $request->file('thumbnail')) {
+            foreach ($files as $file) {
+            $image_name = md5(rand(1000, 10000));
+            $ext = strtolower($file->getClientOriginalExtension());
+            $image_full_name = $image_name . '.' . $ext;
+            $upload_path = 'uploads/';
+            $image_url = $upload_path.$image_full_name;
+            $file->move($upload_path, $image_full_name);
+            $thumbnail[] = $image_url;
+        }
+        }
         $image = array ();
             if($files = $request->file('image' )){
             foreach ($files as $file) {
@@ -45,13 +57,21 @@ class InteriordesigningController extends Controller
         }
     }
     InteriorDesigning::insert([
-        'image' => implode('|', $image),
+        
         'project_name'=>$request->project_name,
         'details'=>$request->details,
+        'image' => implode('|', $image),
+        'thumbnail' => implode('|', $thumbnail),
     ]);
         return back() ;
     }
 
+    public function getThumbnail(){
+        $data= InteriorDesigning::All();
+       // where('category','architecture')->get();
+        return view('interiordesigning',['data'=>$data]);
+        //return DB::select ("select * from services");
+      }
     public function getInteriorDesigning(){
         $data= InteriorDesigning::All();
        // where('category','architecture')->get();

@@ -26,7 +26,7 @@
                 
               Details:  <br>   <input type="text" name="details">  <br>
 
-              
+              Choose Thumbnail: <br>  <input type="file" name="thumbnail[]" id=""  > <br> <br>
                 Choose File: <br>  <input type="file" name="image[]" id="" multiple> <br> <br>
     
                 <input type="submit" value="Send" style="background: #335791">
