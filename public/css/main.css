@@ -3,6 +3,7 @@
 *{
   margin: 0;
   padding: 0;
+  
   box-sizing:border-box;
   font-family: 'Poppins', sans-serif;
  
@@ -11,6 +12,7 @@
   html,body{
     margin: 0;
     padding: 0;
+    
     overflow-x: hidden;
     width: 100%;
   }
@@ -46,8 +48,8 @@ span{
   z-index: 2;
   top: 0;
   left: 0;
-  background-color: rgb(204, 90, 15);
-  background-color: rgba(212, 109, 12, 1);
+  background-color: rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
   overflow-x: hidden;
   transition: 0.5s;
 }
@@ -70,7 +72,9 @@ span{
 }
 
 .overlay a:hover, .overlay a:focus {
-  color: #ffffff;
+  color: #000000;
+  text-decoration:underline;
+ 
 }
 
 .overlay .closebtn {
@@ -90,7 +94,9 @@ span{
   right: 35px;
   }
   .overlay a:hover, .overlay a:focus {
-    color: #ffffff;
+    color: #000000;
+    text-decoration: underline;
+    
   }
   
 }
@@ -126,7 +132,8 @@ span{
     font-size: 24px;
   }
   .overlay a:hover, .overlay a:focus {
-    color: #ffffff;
+    color: #0c0c0c;
+    text-decoration: underline;
   }
 
 }
@@ -332,8 +339,9 @@ input[type=text], select {
 }
 
 input[type=submit] {
-  background-color: #4CAF50;
+  background-color: #000000;
   color: white;
+  width: 50vw;
   padding: 12px 20px;
   border: none;
   border-radius: 4px;
@@ -383,8 +391,22 @@ input[type=submit]:hover {
         resize: none;
         width: 96vw;
         height: 150px;
+        border: 1px solid #ccc;
     }
-      
+    input[type=submit] {
+      background-color: #000000;
+      width: 96vw;
+      color: white;
+      padding: 12px 20px;
+      cursor: pointer;
+      border-radius: 4px;
+    
+    }
+    
+    input[type=submit]:hover {
+      background-color: #45a049 !important;
+    }
+    
     }
  
 
@@ -428,11 +450,11 @@ background-color:#fdfdfd ;
 }
 .booking-info p{
 
- 
+ margin: 60px;
   padding: 60px;
-  font-size: 18px;
+  font-size: 22px;
 
- 
+    
 }
 
 
@@ -460,8 +482,8 @@ background-color:#fdfdfd ;
 
 input[type=submit]:hover {
   background-color:  #45a049 !important;
-  color: rgb(255, 255, 255);
-  border: 2px solid #000;
+ 
+ 
 }
 
 .booking-content textarea{
@@ -474,34 +496,47 @@ input[type=submit]:hover {
 
 .booking-content {
   display: inline-table;
+  height: 30vw;
   width: 10%;
-  padding: 20px;
+  padding: 80px;
   border-radius: 5px;
-  background-color: #fcfcfc;
-  margin-left: 25%;
+  background-color: #ffffff;
+  margin:0%;
 
 
 }
 @media (max-width: 1000px){
   .booking{
     display: block;
+    padding: 0px;
+    background-color: rgb(235, 234, 234);
+   
   }
   .booking-info{
+    
     width: 100%;
+    padding: 20px;
+   
+   
   }
   .booking-info p{
-
- 
-    padding: 10px;
-    font-size: 16px;
-  
+    text-align:justify;
+    font-size: 18px;
+  padding: 0px;
+  margin-right: 10vw;
    
   }
    .booking-form{
       direction:flex;
+      width: 100vw;
+      
+      padding:6px;
    }
    .booking input[type=text],[type=date],[type=time], select {
-        width: 80vw;
+    background-color: #fcfcfc;
+    height: 2.5rem;
+        
+        width: 94vw;
         padding: 8px;
         border: 1px solid #ccc;
         border-radius: 4px;
@@ -513,15 +548,32 @@ input[type=submit]:hover {
       
     .booking-content{
         width: 100%;
-        padding: 20px;
-        margin: 20px;
+        padding: 0px;
+        margin: 0px;
+        
     }
     .booking-content textarea{
         resize: none;
-        width: 80vw;
+        width: 94vw;
         height: 150px;
+        border: 1px solid #ccc;
     }
       
+.booking input[type=submit] {
+  background-color: #000;
+  color: white;
+  width: 94vw;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color:  #45a049 !important;
+  color: rgb(255, 255, 255);
+  
+}
     }
  
 
@@ -600,5 +652,103 @@ input[type=submit]:hover {
     object-fit: cover;
   }
 
+  
+}
+ /* Interior Designing */
+ .projects{
+ 
+ position:relative;
+display: inline-block;
+
+margin: 10px;
+
+
+} 
+.projects img{
+  display: block;
+  width: 100%;
+  height: auto;
+
+
+} 
+.projects_overlay {
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #545657;
+
+}
+
+.projects:hover .projects_overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  gap: 10px;
+}
+
+
+@media(max-width:1000px){
+ 
+.projects{
+ 
+  display: grid;
+  width: 96vw;
+  margin: 10px;
+  position: relative;
+  gap:20px;
+  
+}
+.projects img{
+  display: block;
+  width: 100%;
+  height: auto;
+
+
+} 
+.projects_overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #545657;
+}
+
+.projects:hover .projects_overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
   
 }

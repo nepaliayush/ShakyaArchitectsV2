@@ -30,7 +30,10 @@ Route::get('helo', function () {
 });
 Route::get('projectgallery', function () {
     return view('projectgallery');
+
 });
+
+
 Route::get('dashboard', function () {
     return view('dashboard');
 });
@@ -87,7 +90,8 @@ Route::group(['middleware'=>"web"],function(){
     Route::get('/architecture/', [ArchitectureController::class, 'getArchitecture'])->name('image');
     Route::get('/interiordesigning/', [InteriorDesigningController::class, 'getThumbnail'])->name('image');
     Route::get('/sanitary/', [SanitaryController::class, 'getSanitary'])->name('image');
-    Route::get('/projectgallery/', [InteriorDesigningController::class, 'getInteriorDesigning'])->name('image');
+    Route::get('/projectgallery/{id}', [InteriorDesigningController::class, 'getInteriorDesigning'])->name('image');
+  
     
 
 

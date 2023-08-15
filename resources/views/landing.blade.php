@@ -115,13 +115,13 @@
 
 
     <section id="Booking">
-        <h1>Appoinments</h1>
+    <h1>Appoinments</h1>
         <div class="booking">
-
+        
 
             <div class=" booking-info">
-                <h1>My Appoinments</h1> <br>
-                <h3> Before booking an appointment please check my availablity</h3>
+                
+           
 
 
                 <p>
@@ -131,9 +131,10 @@
                     <i class="fa-solid fa-calendar" style="color: #000000;"></i> Wednesday: 10:00 AM - 5:00 PM <br><br>
                     <i class="fa-solid fa-calendar" style="color: #000000;"></i> Thursday: 10:00 AM - 5:00 PM <br><br>
                     <i class="fa-solid fa-calendar" style="color: #000000;"></i> Friday: 10:00 AM - 5:00 PM <br><br>
-                    <i class="fa-solid fa-calendar-xmark" style="color: #000000;"></i> Saturday: Not Available <br><br>
+                    <i class="fa-solid fa-calendar-xmark" style="color: #000000;"></i> Saturday: Not Available 
+                     <h2>Before booking an appointment please check my availablity</h2>
                 </p>
-
+                
             </div>
             <div class="booking-form">
                 <h1></h1>
@@ -188,7 +189,7 @@
 
                         Message: </span><br><textarea name="message" row="50" placeholder="Enter Message"></textarea>
                         <br>
-                        <input type="submit" value="Send" style="background: #335791">
+                        <input type="submit" value="Send">
 
                     </div>
                 </div>

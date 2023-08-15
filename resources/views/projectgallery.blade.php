@@ -12,21 +12,7 @@
 
 <body>
 
-    <!-- <div class="swiper">
-
-
-
-    <div class="swiper-wrapper">
-    @foreach($data as $service)
-      <div class="swiper-slide"> <img src="{{asset('uploads/'.$service->image)}}" alt="" srcset="" ></div>
-    
-
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
-      <p>{{ $service->name}}</p>
-     
-      @endforeach     
-    </div> -->
+  
 
 
 
@@ -36,36 +22,19 @@
 
     <div class="display">
         <h1>Interior Designing </h1> <br>
+    
+        @foreach ($data as $images)
         @php
-        $images=DB::table('interiordesignings')->pluck('image');
-
+        $imageArray = explode('|', $images);
         @endphp
-
-        @foreach ($images as $image)
-        @php
-        $images = explode('|', $image);
-        @endphp
-        @foreach ($images as $service)
-        <img src="{{URL::to($service)}}" alt=""> <br>
-        
-       
+        @foreach ($imageArray as $image)
+            <img src="{{ URL::to($image) }}" alt="Image">
         @endforeach
-        @endforeach
-       
-        <!-- @foreach($data as $service) -->
-        <!-- <img src="{{asset('/uploads/').$service->image}}" alt="" srcset="" height="500px" width="80%">  -->
-        <!-- <div class="service{{$service['id']==1?'active':''}}">  -->
-        <!-- <img src="{{asset('uploads/'.$service->image)}}" alt="" srcset="" >  -->
-        <!-- <p>{{ $service->project_name}}</p>
-            <p>{{ $service->category}}</p> 
-              @endforeach     
--->
-
-        <!-- </div>
+    @endforeach
+      
         </div>
       
-    </div> -->
-
+    </div> 
 </body>
 
 </html>
