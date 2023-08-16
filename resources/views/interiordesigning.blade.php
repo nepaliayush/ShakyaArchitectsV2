@@ -7,6 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<script>
+  const galleryItems = document.querySelectorAll('.projects');
+
+  galleryItems.forEach(item => {
+    item.addEventListener('touchstart', function() {
+      this.classList.add('touched');
+    });
+
+    item.addEventListener('touchend', function() {
+      this.classList.remove('touched');
+    });
+  });
+</script>
 <body>
     <h1>Interior Designing</h1>
     <div class="projects">
@@ -25,14 +38,24 @@
         @foreach ($data as $data) 
         @foreach(explode(',', $data->thumbnail) as $path)
         <div class="data{{$data['id']==1?'active':''}}">
-        <a href="projectgallery/{{$data['id']}}"><img src="{{ asset($path) }}"></a><br>
+        <a href="projectgallery/{{$data['id']}}"><img src="{{ asset($path) }}" alt=""></a><br>
+        
+        <p>
+   
+   {{ $data->project_name }}  
+   
+  
+ </p>
+       
         </div>
         
         @endforeach  
         <!-- <div class="projects_overlay">
     <div class="text">  {{ $data->project_name }} <br><br>    </div>
   </div> -->
-  {{ $data->project_name }}       
+  
+  
+     
         @endforeach 
 <!-- @foreach($data as $datas)
 

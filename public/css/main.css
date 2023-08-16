@@ -413,28 +413,7 @@ input[type=submit]:hover {
 /* archiecture */
 
 
-.display::-webkit-scrollbar {
-      display: none;
-}   
 
-
-.display{
-background-color:#fdfdfd ;
-  padding: 20px;
-  display: grid;
-  height: 80vh;
-  width: 100%;
-  overflow-y: auto;
-
-  text-align: center;
-  font-size: 18px;
-
-} 
-
-.display img{
-  height: 80vh;
-  
-}
 
 /* booking */
 .booking{
@@ -580,7 +559,14 @@ input[type=submit]:hover {
 
 /* footer */
 
-
+.footer p{
+ 
+  text-align: center;
+  max-width: 100%;
+  margin: 10px auto;
+  line-height: 20px;
+  font-size: 14px;
+}
 .footer-content{
     
     align-items: center;
@@ -656,51 +642,39 @@ input[type=submit]:hover {
 }
  /* Interior Designing */
  .projects{
- 
- position:relative;
-display: inline-block;
 
-margin: 10px;
+  overflow: hidden;
+  display: flex;
+ position:relative;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 25px;
+  padding: 30px;
+
 
 
 } 
 .projects img{
-  display: block;
-  width: 100%;
+  width: 30vw;
   height: auto;
-
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
 
 } 
-.projects_overlay {
 
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: #545657;
-
+.projects p{
+  text-align: center;
+  font-size: 16px;
 }
+
+.projects img:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
 
 .projects:hover .projects_overlay {
   opacity: 1;
-}
-
-.text {
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
-  gap: 10px;
 }
 
 
@@ -709,10 +683,11 @@ margin: 10px;
 .projects{
  
   display: grid;
-  width: 96vw;
-  margin: 10px;
+  width: 100%;
+  margin: 0px;
   position: relative;
   gap:20px;
+  padding: 10px;
   
 }
 .projects img{
@@ -722,33 +697,36 @@ margin: 10px;
 
 
 } 
-.projects_overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: #545657;
+
+
+
 }
 
-.projects:hover .projects_overlay {
-  opacity: 1;
-}
+/* Project Gallery */
 
-.text {
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
+.display{
   
+padding: 20px;
+display: flex;
+flex-wrap: wrap;
+width: 100%;
+overflow-y: auto;
+gap:20px;
+text-align: center;
+font-size: 18px;
+
+} 
+
+.display img{
+height: auto;
+
 }
+
+.display_heading p{
+  
+  text-align: center;
+ 
+}
+
+  
+

@@ -215,7 +215,7 @@
                 <li><a href="https://www.youtube.com/@shakyaarchi"><i class="fa-brands fa-youtube"
                             style="color: #000000;"></i></a></li>
             </ul>
-            <p>Copyright &copy;2023 Shakya Architects Pvt.Ltd </p>
+            
         </div>
 
 

@@ -11,17 +11,12 @@
 </head>
 
 <body>
-
-  
-
-
-
-
-
-
+        <div class="display_heading">
+        <p>Interior Designing</p>
+        </div>
 
     <div class="display">
-        <h1>Interior Designing </h1> <br>
+        
     
         @foreach ($data as $images)
         @php
@@ -30,7 +25,7 @@
         @foreach ($imageArray as $image)
             <img src="{{ URL::to($image) }}" alt="Image">
         @endforeach
-    @endforeach
+         @endforeach
       
         </div>
       
