@@ -14,17 +14,18 @@
 </head>
 
 <body>
-<div class="row" >
-          <div class="col-md-12">
-            <div class="card">
-              <div class="card-header">
-              <h1 class="card-title"> Bookings </h1>
-              </div>
-              <div class="card-body">
-              
-                <div class="table-responsive">
-                  <table class="table" >
-                    <thead class=" text-primary">
+<div class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card strpied-tabled-with-hover">
+                                <div class="card-header ">
+                                    <h4 class="card-title">Bookings</h4>
+                                    <p class="card-category">Bookings from booking form</p>
+                                </div>
+                                <div class="card-body table-full-width table-responsive">
+                                    <table class="table table-hover table-striped">
+                                    <thead class=" text-primary">
                     <th>S.No</th>
       <th>Name</th>
       <th>Email</th>
@@ -49,21 +50,17 @@
       <td>{{ $bookings->message }}</td>
       <td>{{ $bookings->status }}</td>
       <td>
-        <a href="{{url('/deletebooking',$bookings->id)}}" class="button"> Delete</a>
+        <a href="{{url('/deletebooking',$bookings->id)}}" class="button"> Delete&nbsp; &nbsp; </a>
         <a href="{{url('/editbooking',$bookings->id)}}" class="button">Edit </a> 
       </td>
     </tr>
     @endforeach
     </tr>
                     </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-    </div>
-        
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
 </body>
 </html>
 
