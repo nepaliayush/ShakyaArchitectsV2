@@ -21,7 +21,7 @@
     <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
     <link rel="icon" type="image/png" href="../assets/img/favicon.ico">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>Light Bootstrap Dashboard - Free Bootstrap 4 Admin Dashboard by Creative Tim</title>
+    <title>Shakya Architects</title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
@@ -51,7 +51,7 @@
                 <ul class="nav">
                     <li class="nav-item active">
                         <a class="nav-link" href="contactus">
-                            <i class="nc-icon nc-chart-pie-35"></i>
+                        <i class="nc-icon nc-notes"></i>
                             <p>Contact Us</p>
                         </a>
                     </li>
@@ -63,31 +63,32 @@
                     </li>
                     <li>
                         <a class="nav-link" href="architectureupload">
-                            <i class="nc-icon nc-notes"></i>
+                        <i class="nc-icon nc-cloud-upload-94"></i>
                             <p>Architecture </p>
                         </a>
                     </li>
                     <li>
                         <a class="nav-link" href="interiordesigningupload">
-                            <i class="nc-icon nc-paper-2"></i>
+                        <i class="nc-icon nc-cloud-upload-94"></i>
                             <p>Interior Designing </p>
                         </a>
                     </li>
                     <li>
                         <a class="nav-link" href="interiorproductupload">
-                            <i class="nc-icon nc-atom"></i>
+                        <i class="nc-icon nc-cloud-upload-94"></i>
                             <p>Interior Product </p>
                         </a>
                     </li>
                     <li>
                         <a class="nav-link" href="sanitaryupload">
-                            <i class="nc-icon nc-pin-3"></i>
+                        <i class="nc-icon nc-cloud-upload-94"></i>
                             <p>Sanitary</p>
                         </a>
                     </li>
                     <li>
                     <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();	
                                                      document.getElementById('logout-form').submit();">
+                                                     <i class="nc-icon nc-single-02"></i>
                         <p>{{ __('Logout') }}</p>
 
 

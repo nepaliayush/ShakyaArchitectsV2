@@ -10,6 +10,19 @@ class BookingController extends Controller
 {
     //
     public function booking(Request $request){
+        $request->validate(
+            [
+                'name'=>'required',
+                'email'=>'required|email',
+                'phone'=>'required',
+                'subject'=>'required',
+                'date'=>'required',
+                'time'=>'required',
+                'message'=>'required',
+                
+            ]
+        );
+        
         $bookings=new Booking();
         $bookings->name =$request->name;
         $bookings->email =$request->email;

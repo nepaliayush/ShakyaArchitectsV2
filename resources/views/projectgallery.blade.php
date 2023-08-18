@@ -12,7 +12,7 @@
 
 <body>
         <div class="display_heading">
-        <p>Interior Designing</p>
+        <p>Image Gallery</p>
         </div>
 
     <div class="display">

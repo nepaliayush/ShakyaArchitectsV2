@@ -33,7 +33,6 @@ Route::get('projectgallery', function () {
 
 });
 
-
 Route::get('dashboard', function () {
     return view('dashboard');
 });
@@ -93,7 +92,7 @@ Route::group(['middleware'=>"web"],function(){
     Route::get('/sanitary/', [SanitaryController::class, 'getSanitary'])->name('image');
     Route::get('/projectgallery/{id}', [ServiceController::class, 'getInteriorDesigning'])->name('image');
     Route::get('/projectgallery/{id}', [ServiceController::class, 'getArchitecture'])->name('image');
-    
+
   
     
 

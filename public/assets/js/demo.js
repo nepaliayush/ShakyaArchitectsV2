@@ -500,22 +500,22 @@ demo = {
         marker.setMap(map);
     },
 
-    showNotification: function(from, align) {
-        color = Math.floor((Math.random() * 4) + 1);
+    // showNotification: function(from, align) {
+    //     color = Math.floor((Math.random() * 4) + 1);
 
-        $.notify({
+    //     $.notify({
             
-            message: "Welcome to <b>Shakya Architects. </b>"
+    //         message: "Welcome to <b>Shakya Architects. </b>"
 
-        }, {
-            type: type[color],
-            timer: 8000,
-            placement: {
-                from: from,
-                align: align
-            }
-        });
-    }
+    //     }, {
+    //         type: type[color],
+    //         timer: 8000,
+    //         placement: {
+    //             from: from,
+    //             align: align
+    //         }
+    //     });
+    // }
 
 
 

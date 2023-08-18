@@ -12,21 +12,27 @@
   <div id="myNav" class="overlay">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <div class="overlay-content">
-    <a href="about">About</a>
-    <a href="#">Services</a>
-    <a href="#">Clients</a>
-    <a href="#">Contact</a>
+    <a href="#about"onclick="closeNav()">About</a>
+    <a href="#services" onclick="closeNav()">Services</a>
+    <a href="#office"onclick="closeNav()">Office</a>
+    <a href="#booking"onclick="closeNav()">Appointments</a>
+    <a href="#contactus"onclick="closeNav()">Contact Us</a>
+    <a href="#socials"onclick="closeNav()">Socials</a>
   </div>
 </div>
 
     <div class="nav">
+    <label for="active" class="menu-btn"><span></span></label>
         <div class="nav-logo">
         <img src="/images/logo.png" alt="" srcset="" onclick="openNav()">
         </div>
         <div class="nav-text">
         <span  onclick="openNav()">  Shakya Architects </span>
         </div>
-    
+        <div class="nav-button">
+        <span onclick="openNav()">&#9776;</span>
+        </div>
+       
     </div>
 
   

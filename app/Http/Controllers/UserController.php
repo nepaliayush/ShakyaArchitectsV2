@@ -13,6 +13,15 @@ class UserController extends Controller
     //
     public function store(Request $request)
 {
+    $request->validate(
+        [
+            'name'=>'required',
+            'email'=>'required|email',
+            'phone'=>'required',
+            'message'=>'required',
+            
+        ]
+    );
     $userStore=new Contactus();
     $userStore->name =$request->name;
     $userStore->email =$request->email;

@@ -12,6 +12,7 @@
 
 <body>
 @include('sweetalert::alert') 
+
     <section id="swiper">
 
         <div class="swiper">
@@ -67,7 +68,7 @@
         </div>
 
     </section>
-    <section id="sercices">
+    <section id="services">
         <h1>Services</h1>
         <div class="services">
             <div class="architecture">
@@ -114,7 +115,7 @@
     </section>
 
 
-    <section id="Booking">
+    <section id="booking">
     <h1>Appoinments</h1>
         <div class="booking">
         
@@ -132,7 +133,7 @@
                     <i class="fa-solid fa-calendar" style="color: #000000;"></i> Thursday: 10:00 AM - 5:00 PM <br><br>
                     <i class="fa-solid fa-calendar" style="color: #000000;"></i> Friday: 10:00 AM - 5:00 PM <br><br>
                     <i class="fa-solid fa-calendar-xmark" style="color: #000000;"></i> Saturday: Not Available 
-                     <h2>Before booking an appointment please check my availablity</h2>
+                     <h3>Before booking an appointment please check my availablity</h3>
                 </p>
                 
             </div>
@@ -140,21 +141,57 @@
                 <h1></h1>
                 <form method="POST" action="/bookingform">
                     @csrf
+                 
                     <div class="booking-content">
                         <h1> Fill The Form</h1>
                         <div class="booking-form">
                             <div class="booking-form-item">
 
-                                Name:<br> <input type="text" name="name"> <br>
+                                Name:<br> <input type="text" name="name">
+                                <span class="text-danger">
+                                    @error('name')
+                                    {{$message}}
+                                    @enderror
+                                </span>
                                 Email: <br> <input type="text" name="email"> <br>
+                                <span class="text-danger">
+                                    @error('email')
+                                    {{$message}}
+                                    @enderror
+                                </span>
                                 Phone Number: <br> <input type="text" name="phone"><br>
+                                <span class="text-danger">
+                                    @error('phone')
+                                    {{$message}}
+                                    @enderror
+                                </span>
                                 Subject:<br> <input type="text" name="subject"> <br>
+                                <span class="text-danger">
+                                    @error('subject')
+                                    {{$message}}
+                                    @enderror
+                                </span>
                                 Date: <br> <input type="date" name="date" id=""><br>
+                                <span class="text-danger">
+                                    @error('date')
+                                    {{$message}}
+                                    @enderror
+                                </span>
                                 Time: <br> <input type="time" name="time" id=""> <br>
+                                <span class="text-danger">
+                                    @error('time')
+                                    {{$message}}
+                                    @enderror
+                                </span>
 
 
                                 Message: </span><br><textarea name="message" row="50"
                                     placeholder="Enter Message"></textarea> <br>
+                                    <span class="text-danger">
+                                    @error('message')
+                                    {{$message}}
+                                    @enderror
+                                </span>
                                 <input type="hidden" name="status" value="Pending">
                                 <input type="submit" value="Send">
 
@@ -169,7 +206,8 @@
 
 
     </section>
-    <section id="contact">
+    <section id="contactus">
+        <div class="contact">
         <h1>Contact us</h1>
         <div class="contact_image">
             <img src="" alt="" srcset="">
@@ -183,12 +221,32 @@
                     <div class="form-item">
 
                         Name:<br> <input type="text" name="name"> <br>
+                        <span class="text-danger">
+                                    @error('name')
+                                    {{$message}}
+                                    @enderror
+                                </span>
                         Email: <br> <input type="text" name="email"> <br>
+                        <span class="text-danger">
+                                    @error('email')
+                                    {{$message}}
+                                    @enderror
+                                </span>
                         Phone Number: <br> <input type="text" name="phone"> <br>
+                        <span class="text-danger">
+                                    @error('phone')
+                                    {{$message}}
+                                    @enderror
+                                </span>
 
 
                         Message: </span><br><textarea name="message" row="50" placeholder="Enter Message"></textarea>
                         <br>
+                        <span class="text-danger">
+                                    @error('message')
+                                    {{$message}}
+                                    @enderror
+                                </span>
                         <input type="submit" value="Send">
 
                     </div>
@@ -196,12 +254,14 @@
             </div>
 
         </form>
+        </div>
+        
     </section>
 
-    <section id='footer'>
-
-        <div class="footer-content">
-            <h1>Shakya Architects</h1>
+    <section id='socials'>
+    <div class="footer">
+    <div class="footer-content">
+            <h1>Our Social Network</h1>
             <!-- <img src="/images/footer.jpg" alt="" srcset="" > -->
             <img src="/images/footer.jpg" alt="" srcset="">
             <ul class="socials">
@@ -217,6 +277,8 @@
             </ul>
             
         </div>
+    </div>
+        
 
 
 

@@ -68,22 +68,46 @@ class ServiceController extends Controller
           $image[] = $image_url;
       }
   }
-  InteriorDesigning::insert([
+  $selectedTable = $request->input('service');
+  switch ($selectedTable) {
+    case 'architecture':
+        DB::table('architectures')->insert([
+          'project_name'=>$request->project_name,
+          'details'=>$request->details,
+          'image' => implode('|', $image),
+          'thumbnail' => implode('|', $thumbnail),
+        ]);
+        break;
+
+    case 'interiordesigning':
+        DB::table('table2')->insert([
+          'project_name'=>$request->project_name,
+          'details'=>$request->details,
+          'image' => implode('|', $image),
+          'thumbnail' => implode('|', $thumbnail),
+        ]);
+        break;
+    // Add cases for other tables
+    default:
+        // Handle invalid table selection
+        return redirect()->back()->with('error', 'Invalid table selection.');
+}
+  // InteriorDesigning::insert([
       
-      'project_name'=>$request->project_name,
-      'details'=>$request->details,
-      'image' => implode('|', $image),
-      'thumbnail' => implode('|', $thumbnail),
-  ]);
-      //return back() ;
-      Architecture::insert([
+  //     'project_name'=>$request->project_name,
+  //     'details'=>$request->details,
+  //     'image' => implode('|', $image),
+  //     'thumbnail' => implode('|', $thumbnail),
+  // ]);
+  //     //return back() ;
+  //     Architecture::insert([
       
-        'project_name'=>$request->project_name,
-        'details'=>$request->details,
-        'image' => implode('|', $image),
-        'thumbnail' => implode('|', $thumbnail),
-    ]);
-        return back() ;
+  //       'project_name'=>$request->project_name,
+  //       'details'=>$request->details,
+  //       'image' => implode('|', $image),
+  //       'thumbnail' => implode('|', $thumbnail),
+  //   ]);
+  //       return back() ;
   }
   public function getInteriorThumbnail(){
     $data= InteriorDesigning::All();

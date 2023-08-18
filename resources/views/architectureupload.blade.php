@@ -27,7 +27,11 @@ Dashboard
 
 
                                 Details: <br> <input type="text" name="details"> <br>
-                               
+                                <select name="service" id="table">
+    <option value="architecture">Architecture</option>
+    <option value="Interiordesigning">InteriorDesigning</option>
+    <!-- Add more options for other tables -->
+</select>
                                 Choose Thumbnail: <br>  <input type="file" name="thumbnail[]" id=""  > <br> 
                                 Choose File: <br> <input type="file" name="image[]" id="" multiple> <br>
                                 <button type="submit" class="btn btn-info btn-fill pull-right">Upload</button>
