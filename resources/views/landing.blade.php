@@ -121,9 +121,6 @@
         
 
             <div class=" booking-info">
-                
-           
-
 
                 <p>
                     <i class="fa-solid fa-calendar" style="color: #000000;"></i> Sunday: 10:00 AM - 5:00 PM <br> <br>
@@ -133,8 +130,9 @@
                     <i class="fa-solid fa-calendar" style="color: #000000;"></i> Thursday: 10:00 AM - 5:00 PM <br><br>
                     <i class="fa-solid fa-calendar" style="color: #000000;"></i> Friday: 10:00 AM - 5:00 PM <br><br>
                     <i class="fa-solid fa-calendar-xmark" style="color: #000000;"></i> Saturday: Not Available 
-                     <h3>Before booking an appointment please check my availablity</h3>
+                    
                 </p>
+                <h3>Before booking an appointment please check my availablity</h3>
                 
             </div>
             <div class="booking-form">
@@ -207,19 +205,13 @@
 
     </section>
     <section id="contactus">
-        <div class="contact">
-        <h1>Contact us</h1>
-        <div class="contact_image">
-            <img src="" alt="" srcset="">
-
-        </div>
-        <form method="POST" action="/landing/store">
-            @csrf
+    <h1>Contact us</h1><br>
             <div class="contact-content">
-
+           
                 <div class="form">
                     <div class="form-item">
-
+                    <form method="POST" action="/landing/store">
+            @csrf
                         Name:<br> <input type="text" name="name"> <br>
                         <span class="text-danger">
                                     @error('name')
@@ -248,21 +240,21 @@
                                     @enderror
                                 </span>
                         <input type="submit" value="Send">
-
+                        </form>
                     </div>
                 </div>
             </div>
 
-        </form>
-        </div>
+       
+        
         
     </section>
 
     <section id='socials'>
-    <div class="footer">
+
     <div class="footer-content">
             <h1>Our Social Network</h1>
-            <!-- <img src="/images/footer.jpg" alt="" srcset="" > -->
+           
             <img src="/images/footer.jpg" alt="" srcset="">
             <ul class="socials">
 
@@ -277,8 +269,7 @@
             </ul>
             
         </div>
-    </div>
-        
+ 
 
 
 

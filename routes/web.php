@@ -24,10 +24,10 @@ use App\Http\Controllers\InteriorDesigningController;
 Route::get('/', function () {
     return view('landing');
 });
-Route::get('helo', function () {
-    return view('helo');
-
+Route::get('/home', function () {
+    return view('landing');
 });
+
 Route::get('projectgallery', function () {
     return view('projectgallery');
 
@@ -35,13 +35,8 @@ Route::get('projectgallery', function () {
 
 Route::get('dashboard', function () {
     return view('dashboard');
-});
-// Route::get('/editbooking', function () {
-//     return view('editbooking');
-// });
-// Route::get('/contactus', function () {
-//     return view('contactus');
-// });
+})->middleware('auth');;
+
 Route::get('architectureupload', function () {
     return view('architectureupload');
 })->middleware('auth');
@@ -57,16 +52,13 @@ Route::get('sanitaryupload', function () {
 Route::get('editbooking', function () {
     return view('editbooking');
 })->middleware('auth');
-// Route::get('architectu
-// Route::get('architectureupload', function () {
-//     return view('architectureupload');
-// });
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
 
 Auth::routes();
+
+
+
+
+
 
 Route::get('/admin', [App\Http\Controllers\HomeController::class, 'index'])->name('admin');
 Route::group(['middleware'=>"web"],function(){

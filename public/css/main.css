@@ -1,80 +1,75 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 @import 'swiper/swiper-bundle.css';
-*{
+
+* {
   margin: 0;
   padding: 0;
-  right: 0;
-  box-sizing:border-box;
+
+  box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
- 
-} 
-@media (max-width:1000px) {
-  html,body{
-    margin: 0;
-    padding: 0;
-    
-    overflow-x: hidden;
-    width: 100%;
-  }
-  
+
 }
-/* --------------------------------------------------------------------------- */
 
-/* -------------------------------------------------------------------------- */
+
+
 /* nav */
-
-
-.nav{
+.nav {
 
   display: flex;
   padding: 10px 0 10px 0px;
   line-height: 2rem;
- 
+
 }
-.nav-logo{
+
+.nav-logo {
 
   width: 5vw;
 }
-.nav img{
+
+.nav img {
   height: 60px;
-  width:80px;
+  width: 80px;
 }
 
-.nav-text{
-    
+.nav-text {
+
   margin-top: 0vw;
-  margin-left:37vw;
- padding:0px ;
- 
-}
-.nav-text span{
+  margin-left: 37vw;
+  padding: 0px;
 
-  
+}
+
+.nav-text span {
+
+
   padding: 6px;
   display: flex;
   font-size: 22px;
 }
-.nav-button{
-    float: right;
+
+.nav-button {
+  float: right;
   position: absolute;
-right:0px;
+  right: 0px;
 
 }
-.nav-button span{
-  font-size:28px;
+
+.nav-button span {
+  font-size: 28px;
   cursor: pointer;
   line-height: 1rem;
 }
-span{
 
-  cursor:pointer;
+span {
+
+  cursor: pointer;
   font-size: 22px;
   display: flex;
   color: #000000;
   margin-top: 25px;
   padding: 10px;
   ;
-  
+
 }
 
 
@@ -108,10 +103,11 @@ span{
   transition: 0.3s;
 }
 
-.overlay a:hover, .overlay a:focus {
+.overlay a:hover,
+.overlay a:focus {
   color: #000000;
-  text-decoration:underline;
- 
+  text-decoration: underline;
+
 }
 
 .overlay .closebtn {
@@ -124,64 +120,79 @@ span{
 
 
 @media screen and (max-height: 450px) {
-  .overlay a {font-size: 20px}
-  .overlay .closebtn {
-  font-size: 40px;
-  top: 15px;
-  right: 35px;
+  .overlay a {
+    font-size: 20px
   }
-  .overlay a:hover, .overlay a:focus {
+
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+
+  .overlay a:hover,
+  .overlay a:focus {
     color: #000000;
     text-decoration: underline;
-    
+
   }
-  
+
 }
 
-  
-@media(max-width:450px){
-  .nav{
+
+@media(max-width:450px) {
+  .nav {
     height: 80px;
   }
-  .nav-logo{
+
+  .nav-logo {
 
     margin-top: 0px;
     background-color: red;
     width: 0px;
-    
+
   }
-  .nav-logo img{
+
+  .nav-logo img {
     height: 15vw;
     width: 18vw;
   }
-  .nav-text{
-    
-    margin-top: 0vw;
-    margin-left:24vw;
-   padding:0px ;
-   
-  }
-  .nav-text span{
 
-    
+  .nav-text {
+
+    margin-top: 0vw;
+    margin-left: 24vw;
+    padding: 0px;
+
+  }
+
+  .nav-text span {
+
+
     padding: 6px;
     display: flex;
     font-size: 22px;
   }
-  .nav-button{
-    
+
+  .nav-button {
+
     padding-left: 10px;
-    line-height: 0.5rem;;
+    line-height: 0.5rem;
+    ;
   }
-  .overlay-content{
+
+  .overlay-content {
     top: 70px;
   }
-  .overlay a:hover, .overlay a:focus {
+
+  .overlay a:hover,
+  .overlay a:focus {
     color: #0c0c0c;
     text-decoration: underline;
   }
 
 }
+
 /* swiper */
 
 .swiper {
@@ -217,165 +228,116 @@ span{
 .swiper-button-next {
   color: #fbfbfb !important;
 }
-:root{
+
+:root {
   --swiper-theme-color: #f7f7f9 !important;
 }
 
 
-@media (max-width: 1000px){
-  .swiper {
-    width: 100%;
-    height: 80vw;
-  
-  }
-}
 
 /* about us */
-h1{
- text-align: center;
- font-size: 30px;
+h1 {
+  text-align: center;
+  font-size: 30px;
 }
-.about{
+
+.about {
   display: flex;
   gap: 10px;
   margin-top: 5%;
   margin-bottom: 5%;
- 
- 
+
+
 }
-.about_img{
+
+.about_img {
   padding: 10px;
-  width:50vw;
+  width: 50vw;
 }
-img{
-  width:100%;
-  
+
+img {
+  width: 100%;
+
 }
-.about_us{
+
+.about_us {
   padding: 100px;
-  width:50vw;
+  width: 50vw;
 
-  text-align:justify;
+  text-align: justify;
 }
-@media (max-width: 1000px){
-  .about{
-      display: block;
-      
-  }
-  .about_us{
-   
-    width: 100%;
-    text-align: justify;
-    overflow: hidden;
-    padding: 10px;
-  }
-  .about_img{
-    width: 100vw;
-  
 
-  }
-}
 /* services */
 .services {
-  padding: 25px;
+  padding: 10px;
   margin-bottom: 5%;
   display: flex;
-  gap:80px;
+  gap: 80px;
 }
 
 .box {
   flex: 1;
-  height: 100px;   /* Adjust the height as needed */
-  background-color: #ccc;   /* Adjust the background color as needed */
-  margin: 5px;   /* Adjust the margin as needed */
-  
+  height: 100px;
+  /* Adjust the height as needed */
+  background-color: #ccc;
+  /* Adjust the background color as needed */
+  margin: 5px;
+  /* Adjust the margin as needed */
+
 }
-.services img{
+
+.services img {
   width: 20vw;
   height: 200px;
 }
 
-a{
-    text-decoration:none;
+a {
+  text-decoration: none;
   color: #000;
- 
-}
-
-@media (max-width: 1000px){
-  .services{
-      display: block;
-      padding: 0px;
-      
-  }
-  .services img{
-    width: 100vw;
-  }
 
 }
+
+
 
 /* office */
-.office{
+.office {
   display: flex;
   color: rgb(3, 3, 3);
   background-color: rgb(255, 255, 255);
-  
- 
+
+
 }
-.office h1,h2{
+
+.office h1,
+h2 {
   color: #050505;
   font-size: 34px;
 }
-.office h2{
-    color: #050505;
-    font-size: 34px;
-    padding: 30px;
-  }
+
+.office h2 {
+  color: #050505;
+  font-size: 34px;
+  padding: 30px;
+}
+
 .maps {
   height: 400px;
   padding: 30px;
- 
+
 
 }
-.office_info{
-  color:#000000;
-  width:50vw;
+
+.office_info {
+  color: #000000;
+  width: 50vw;
   padding: 200px;
 }
-@media (max-width: 1000px){
-  .office{
 
-    display:block;
-   
-
-}
-  .maps{
-    padding: 20px;
-    display: contents;
-    width:100vw;
-    background-color: aliceblue;   
-  }
-  iframe{
-    width: 100vw;
-    
-    
-  }
-  .office_info{
-    display: block;
-    text-align: center;
-    width:100vw;
-    padding: 2px;
-   
-    
-    
-  }
-}
 
 
 /* contact */
-.contact{
-height: 40vw;
-}
-input[type=text], select {
+input[type=text],
+select {
   width: 50vw;
   padding: 8px;
   border: 1px solid #ccc;
@@ -400,73 +362,33 @@ input[type=submit]:hover {
   background-color: #45a049 !important;
 }
 
-.contact-content textarea{
-    resize: none;
-    width: 50vw;
-    height: 150px;
+.contact-content textarea {
+  resize: none;
+  width: 50vw;
+  height: 150px;
 }
 
 
 
 .contact-content {
-    display: inline-table;
+  display: inline-table;
   width: 20%;
   padding: 20px;
   border-radius: 5px;
   background-color: #fcfcfc;
   margin-left: 25%;
+  margin-bottom: 2%;
 
 
 }
-.contact-content span{
+
+.contact-content span {
   color: red;
-  font-size:12px;
-margin:-10px;
+  font-size: 12px;
+  margin: -10px;
 }
-@media (max-width: 1000px){
-    input[type=text], select {
-        width: 96vw;
-        padding: 8px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
-        margin-top: 6px;
-        margin-bottom: 16px;
-        resize: vertical;
-      }
-      
-    .contact-content{
-        width: 100%;
-        padding: 0;
-        margin: 2%;
-    }
-    .contact-content span{
-      color: red;
-      font-size:12px;
-    margin:-10px;
-    }
-    .contact-content textarea{
-        resize: none;
-        width: 96vw;
-        height: 150px;
-        border: 1px solid #ccc;
-    }
-    input[type=submit] {
-      background-color: #000000;
-      width: 96vw;
-      color: white;
-      padding: 12px 20px;
-      cursor: pointer;
-      border-radius: 4px;
-    
-    }
-    
-    input[type=submit]:hover {
-      background-color: #45a049 !important;
-    }
-    
-    }
- 
+
+
 
 /* archiecture */
 
@@ -474,29 +396,33 @@ margin:-10px;
 
 
 /* booking */
-.booking{
-  
-  display: flex;
-  height: 60vw;
-}
-.booking-info{
- 
-    width: 50vw;
-    text-align: justify;
-    padding: 60px;
-   
-}
-.booking-info p{
+.booking {
 
- margin: 60px;
+  display: flex;
+}
+
+.booking-info {
+
+  width: 50vw;
+  text-align: justify;
+  padding: 60px;
+
+}
+
+.booking-info p {
+
+  margin: 60px;
   padding: 60px;
   font-size: 22px;
 
-    
+
 }
 
 
-.booking input[type=text], [type=date],[type=time],select {
+.booking input[type=text],
+[type=date],
+[type=time],
+select {
   width: 30vw;
   padding: 8px;
   border: 1px solid #ccc;
@@ -519,15 +445,15 @@ margin:-10px;
 }
 
 input[type=submit]:hover {
-  background-color:  #45a049 !important;
- 
- 
+  background-color: #45a049 !important;
+
+
 }
 
-.booking-content textarea{
-    resize: none;
-    width: 30vw;
-    height: 150px;
+.booking-content textarea {
+  resize: none;
+  width: 30vw;
+  height: 150px;
 }
 
 
@@ -539,199 +465,128 @@ input[type=submit]:hover {
   padding: 80px;
   border-radius: 5px;
   background-color: #ffffff;
-  margin:0%;
+  margin: 0%;
 
 
 }
-.booking-content span{
+
+.booking-content span {
   color: red;
-  font-size:12px;
-margin:-10px;
-}
-@media (max-width: 1000px){
-  .booking{
-    display: block;
-    padding: 0px;
-    background-color: rgb(255, 255, 255);
-   
-  }
-  .booking-content span{
-    color: red;
-    font-size:12px;
-  margin:-10px;
-  }
-  .booking-info{
-    
-    width: 100%;
-    padding: 0px;
-   
-   
-  }
-  .booking-info p{
-    text-align:justify;
-    font-size: 18px;
-  padding: 0px;
- 
-   
-  }
-   .booking-form{
-      direction:flex;
-      width: 100vw;
-      
-      padding:6px;
-   }
-   .booking input[type=text],[type=date],[type=time], select {
-    background-color: #fcfcfc;
-    height: 2.5rem;
-        
-        width: 94vw;
-        padding: 8px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
-        margin-top: 6px;
-        margin-bottom: 16px;
-        resize: vertical;
-      }
-      
-    .booking-content{
-        width: 100%;
-        padding: 0px;
-        margin: 0px;
-        
-    }
-    .booking-content textarea{
-        resize: none;
-        width: 94vw;
-        height: 150px;
-        border: 1px solid #ccc;
-    }
-      
-.booking input[type=submit] {
-  background-color: #000;
-  color: white;
-  width: 94vw;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+  font-size: 12px;
+  margin: -10px;
 }
 
-input[type=submit]:hover {
-  background-color:  #45a049 !important;
-  color: rgb(255, 255, 255);
-  
-}
-    }
- 
 
 
 /* footer */
 
-.footer p{
- 
+.footer p {
+
   text-align: center;
   max-width: 100%;
   margin: 10px auto;
   line-height: 20px;
   font-size: 14px;
 }
-.footer-content{
-    
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
+
+.footer-content {
+
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
 }
-.footer-content h3{
-    font-size: 1.8rem;
-    font-weight: 400;
-    text-transform: capitalize;
-    line-height: 3rem;
+
+.footer-content h3 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 3rem;
 }
-.footer-content p{
-    max-width: 500px;
-    margin: 10px auto;
-    line-height: 28px;
-    font-size: 14px;
+
+.footer-content p {
+  max-width: 500px;
+  margin: 10px auto;
+  line-height: 28px;
+  font-size: 14px;
 }
-.footer-content img{
+
+.footer-content img {
   height: 600px;
 }
-.socials{
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 1rem 0 3rem 0;
-}
-.socials li{
-    margin: 0 10px;
-}
-.socials a{
-   font-size: 2rem;
-    text-decoration: none;
-    color: #fff;
-}
-.socials a i{
-    font-size: 1.1rem;
-    transition: color .4s ease;
-    height: 20px;
 
-}
-.socials a:hover i{
-    color: aqua;
+.socials {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0 3rem 0;
 }
 
-.footer-bottom{
-    background: #000;
-    width: 100vw;
-    padding: 20px 0;
-    text-align: center;
-}
-.footer-bottom p{
-    font-size: 14px;
-    word-spacing: 2px;
-    text-transform: capitalize;
-}
-.footer-bottom span{
-    text-transform: uppercase;
-    opacity: .4;
-    font-weight: 200;
+.socials li {
+  margin: 0 10px;
 }
 
-@media(max-width:1000px){
- 
-  .footer-content img{
-    height: 300px;
-    object-fit: cover;
-  }
-
-  
+.socials a {
+  font-size: 2rem;
+  text-decoration: none;
+  color: #fff;
 }
- /* Interior Designing */
- .projects{
+
+.socials a i {
+  font-size: 1.1rem;
+  transition: color .4s ease;
+  height: 20px;
+
+}
+
+.socials a:hover i {
+  color: aqua;
+}
+
+.footer-bottom {
+  background: #000;
+  width: 100vw;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+  word-spacing: 2px;
+  text-transform: capitalize;
+}
+
+.footer-bottom span {
+  text-transform: uppercase;
+  opacity: .4;
+  font-weight: 200;
+}
+
+/* Interior Designing */
+.projects {
 
   overflow: hidden;
   display: flex;
- position:relative;
+  position: relative;
   flex-wrap: wrap;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 25px;
-  padding: 40px;
+  padding: 30px;
 
 
 
-} 
-.projects img{
+}
+
+.projects img {
   width: 30vw;
   height: auto;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
 
-} 
+}
 
-.projects p{
+.projects p {
   text-align: center;
   font-size: 16px;
 }
@@ -747,55 +602,249 @@ input[type=submit]:hover {
 }
 
 
-@media(max-width:1000px){
- 
-.projects{
- 
-  display: grid;
-  width: 100%;
-  margin: 0px;
-  position: relative;
-  gap:20px;
-  padding: 10px;
-  
-}
-.projects img{
-  display: block;
-  width: 100%;
-  height: auto;
-
-
-} 
-
-
-
-}
 
 /* Project Gallery */
 
-.display{
-  
-padding: 20px;
-display: flex;
-flex-wrap: wrap;
-width: 100%;
-overflow-y: auto;
-gap:20px;
-text-align: center;
-font-size: 18px;
+.display {
 
-} 
-
-.display img{
-height: auto;
-
-}
-
-.display_heading p{
-  
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  overflow-y: auto;
+  gap: 20px;
   text-align: center;
- 
+  font-size: 18px;
+
 }
 
-  
+.display img {
+  height: auto;
 
+}
+
+.display_heading p {
+
+  text-align: center;
+
+}
+
+/* ----------------------Mobile view ----------------------------------------------------------*/
+@media (max-width:1000px) {
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100%;
+
+  }
+
+  .swiper {
+    width: 100%;
+    height: 80vw;
+
+  }
+
+  .about {
+    display: block;
+
+  }
+
+  .about_us {
+
+    width: 100%;
+    text-align: justify;
+    overflow: hidden;
+    padding: 10px;
+  }
+
+  .about_img {
+    width: 100vw;
+
+
+  }
+
+  .services {
+    display: block;
+    padding: 0px;
+
+  }
+
+  .services img {
+    width: 100vw;
+  }
+
+  .office {
+
+    display: block;
+
+
+  }
+
+  .maps {
+    padding: 20px;
+    display: contents;
+    width: 100vw;
+    background-color: aliceblue;
+  }
+
+  iframe {
+    width: 100vw;
+
+
+  }
+
+  .office_info {
+    display: block;
+    text-align: center;
+    width: 100vw;
+    padding: 2px;
+
+
+
+  }
+
+  input[type=text],
+  select {
+    width: 96vw;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+
+  .contact-content {
+
+    width: 100%;
+    padding: 0px;
+    margin: 2%;
+  }
+
+  .contact-content textarea {
+    resize: none;
+    width: 96vw;
+    height: 150px;
+    border: 1px solid #ccc;
+  }
+
+  input[type=submit] {
+    background-color: #000000;
+    width: 96vw;
+    color: white;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+
+  }
+
+  input[type=submit]:hover {
+    background-color: #45a049 !important;
+  }
+
+  .booking {
+    display: block;
+    padding: 0px;
+    background-color: rgb(253, 252, 252);
+
+  }
+
+  .booking-info {
+
+    width: 100%;
+    padding: 0px;
+
+
+  }
+
+  .booking-info p {
+    text-align: justify;
+    font-size: 18px;
+    padding: 0px;
+    margin-right: 10vw;
+
+  }
+
+  .booking-form {
+    direction: flex;
+    width: 100vw;
+
+    padding: 6px;
+  }
+
+  .booking input[type=text],
+  [type=date],
+  [type=time],
+  select {
+    background-color: #fcfcfc;
+    height: 2.5rem;
+
+    width: 94vw;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+
+  .booking-content {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+
+  }
+
+  .booking-content textarea {
+    resize: none;
+    width: 94vw;
+    height: 150px;
+    border: 1px solid #ccc;
+  }
+
+  .booking input[type=submit] {
+    background-color: #000;
+    color: white;
+    width: 94vw;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  input[type=submit]:hover {
+    background-color: #45a049 !important;
+    color: rgb(255, 255, 255);
+
+  }
+
+  .footer-content img {
+    height: 300px;
+    object-fit: cover;
+  }
+
+  .projects {
+
+    display: grid;
+    width: 100%;
+    margin: 0px;
+    position: relative;
+    gap: 20px;
+    padding: 10px;
+
+  }
+
+  .projects img {
+    display: block;
+    width: 100%;
+    height: auto;
+
+
+  }
+
+}

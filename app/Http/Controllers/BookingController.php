@@ -46,6 +46,7 @@ class BookingController extends Controller
 public function deleteBooking($id){
     $bookings=Booking::find($id);
     $bookings->delete();
+    alert()->success('Booking Deleted  Sucessfuly','We have deleted the booking');
     return redirect()->back();
 }
 public function edit($id)

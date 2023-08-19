@@ -18,13 +18,15 @@
     <a href="#booking"onclick="closeNav()">Appointments</a>
     <a href="#contactus"onclick="closeNav()">Contact Us</a>
     <a href="#socials"onclick="closeNav()">Socials</a>
+    <a href="admin"onclick="closeNav()">Admin Login</a>
+    
   </div>
 </div>
 
     <div class="nav">
     <label for="active" class="menu-btn"><span></span></label>
         <div class="nav-logo">
-        <img src="/images/logo.png" alt="" srcset="" onclick="openNav()">
+        <a href="landing"><img src="/images/logo.png" alt="" srcset="" ></a>
         </div>
         <div class="nav-text">
         <span  onclick="openNav()">  Shakya Architects </span>

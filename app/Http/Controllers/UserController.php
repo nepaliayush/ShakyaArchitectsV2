@@ -47,6 +47,7 @@ class UserController extends Controller
 public function contactdelete($id){
     $contact=ContactUs::find($id);
     $contact->delete();
+    Alert::success('Message Deleted Sucessfuly','We have deleted  your message');
     return redirect()->back();
 }
 

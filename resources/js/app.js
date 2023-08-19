@@ -1,4 +1,5 @@
 import './bootstrap';
+
 import '@fortawesome/fontawesome-free/js/all';
 import Swiper from 'swiper/bundle';
 import 'swiper/css';
