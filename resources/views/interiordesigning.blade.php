@@ -21,8 +21,12 @@
   });
 </script>
 <body>
-    <h1>Interior Designing</h1>
+  <div class="projects_heading">
+  <p>Interior Designing</p>
+  </div>
+
     <div class="projects">
+    
 <!-- 
         @php
         $images=DB::table('interiordesignings')->pluck('thumbnail');

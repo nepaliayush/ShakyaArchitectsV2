@@ -5,27 +5,18 @@ Contact Us
 
 
 @section('content')
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
 @include('sweetalert::alert') 
 <div class="content">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="card strpied-tabled-with-hover">
-                                <div class="card-header ">
-                                    <h4 class="card-title">Contact Us</h4>
-                                    <p class="card-category">Messages recieved form contact us form</p>
-                                </div>
-                                <div class="card-body table-full-width table-responsive">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Contact Us</h4>
+                        <p class="card-category">Messages received form contact us form.</p>
+                    </div>
+                    <div class="card-body">
+                    <div class="card-body table-full-width table-responsive">
                                     <table class="table table-hover table-striped">
                                     <thead class=" text-primary">
                             <th>S.No</th>
@@ -49,10 +40,12 @@ Contact Us
                         </tbody>
                                     </table>
                                 </div>
-                            </div>
-                        </div>
-</body>
-</html>
+                    </div>
+                </div>
+            </div>
 
+        </div>
+    </div>
+</div>      
 
 @endsection

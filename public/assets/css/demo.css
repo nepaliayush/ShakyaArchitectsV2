@@ -201,7 +201,7 @@
 }
 
 .fixed-plugin .adjustments-line p {
-    float: left;
+    
     display: inline-block;
     margin-bottom: 0;
     font-size: 1em;
@@ -834,11 +834,10 @@
   }
 
   
+.dashboard{
+    margin-left: 35%;
+}
 
-
-  .dashboard IMG{
-    margin-left: 205;
-  }
    td a{
     font-size: 18px;
     color: rgb(79, 78, 88);
@@ -856,18 +855,18 @@
   
     color:rgb(250, 28, 28);
   }
-input[type=text], select {
-    width: 77vw;
+input[type=text],[type=date],[type=time], select {
+    width: 76vw;
     padding: 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-    margin-top: 6px;
+    margin-top: 0px;
     margin-bottom: 16px;
     resize: vertical;
   }
   input[type=file], select {
-    width: 77vw;
+    width: 76vw;
     padding: 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -889,3 +888,9 @@ input[type=text], select {
     background-color: #45a049 !important;
   }
   
+  @media(max-width:1000px){
+    .dashboard{
+        margin-left:5%;
+    }
+
+  }

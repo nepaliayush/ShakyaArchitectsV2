@@ -1,5 +1,9 @@
 <div class="footer">
-    
+<p>
+©
+                            <script>
+                                document.write(new Date().getFullYear())
+                            </script>
           
-            <p>Copyright &copy;2023 Shakya Architects Pvt.Ltd </p>
+            Shakya Architects Pvt. Ltd .</p>
 </div>

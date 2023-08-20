@@ -6,14 +6,17 @@
 
 @section('content')
 @include('sweetalert::alert')
-<div class="row" >
-          <div class="col-md-12">
-            <div class="card">
-              <div class="card-header">
-                <h1 class="card-title">Edit Booking</h1>
-              </div>
-              <div class="card-body">
-              <form method="POST" action="{{url('updatebooking/'. $bookings->id)}}"   >
+
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Edit Booking</h4>
+                    </div>
+                    <div class="card-body">
+                    <form method="POST" action="{{url('updatebooking/'. $bookings->id)}}"   id="redirect-form">
                   @csrf
                   @method('PUT')
         <div class="contact-content">
@@ -31,19 +34,21 @@
                
     
                 <!-- <input type="submit" value="Send" style="background: #335791"> -->
-                <button type="submit" > Update</button>
+                <button type="submit"
+                                                class="btn btn-info btn-fill pull-right">Update</button>
            
             </div>
             </div>
         </div>
 
         </form>
-              </div>
+                    </div>
+                </div>
             </div>
-          </div>
+
         </div>
     </div>
-        
+</div>
 @endsection
 
 

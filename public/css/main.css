@@ -12,9 +12,8 @@
 
 
 
-/* nav */
+/* Navigation bar */
 .nav {
-
   display: flex;
   padding: 10px 0 10px 0px;
   line-height: 2rem;
@@ -22,7 +21,6 @@
 }
 
 .nav-logo {
-
   width: 5vw;
 }
 
@@ -32,16 +30,13 @@
 }
 
 .nav-text {
-
   margin-top: 0vw;
-  margin-left: 37vw;
+  margin-left: 37%;
   padding: 0px;
 
 }
 
 .nav-text span {
-
-
   padding: 6px;
   display: flex;
   font-size: 22px;
@@ -61,7 +56,6 @@
 }
 
 span {
-
   cursor: pointer;
   font-size: 22px;
   display: flex;
@@ -161,7 +155,7 @@ span {
   .nav-text {
 
     margin-top: 0vw;
-    margin-left: 24vw;
+    margin-left: 2%;
     padding: 0px;
 
   }
@@ -261,7 +255,7 @@ img {
 }
 
 .about_us {
-  padding: 100px;
+  padding: 50px;
   width: 50vw;
 
   text-align: justify;
@@ -269,24 +263,17 @@ img {
 
 /* services */
 .services {
-  padding: 10px;
-  margin-bottom: 5%;
+
   display: flex;
-  gap: 80px;
+  padding: 50px;
+  margin: 0%;
+  gap: 60px;
 }
 
-.box {
-  flex: 1;
-  height: 100px;
-  /* Adjust the height as needed */
-  background-color: #ccc;
-  /* Adjust the background color as needed */
-  margin: 5px;
-  /* Adjust the margin as needed */
 
-}
 
 .services img {
+
   width: 20vw;
   height: 200px;
 }
@@ -336,6 +323,30 @@ h2 {
 
 
 /* contact */
+.contact-content {
+  display: inline-table;
+  width: 20%;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #fcfcfc;
+  margin-left: 25%;
+  margin-bottom: 2%;
+
+
+}
+.contact-content textarea {
+  resize: none;
+  width: 50vw;
+  height: 150px;
+}
+
+
+.contact-content span {
+  color: red;
+  font-size: 12px;
+  margin: -10px;
+}
+
 input[type=text],
 select {
   width: 50vw;
@@ -362,35 +373,9 @@ input[type=submit]:hover {
   background-color: #45a049 !important;
 }
 
-.contact-content textarea {
-  resize: none;
-  width: 50vw;
-  height: 150px;
-}
 
 
 
-.contact-content {
-  display: inline-table;
-  width: 20%;
-  padding: 20px;
-  border-radius: 5px;
-  background-color: #fcfcfc;
-  margin-left: 25%;
-  margin-bottom: 2%;
-
-
-}
-
-.contact-content span {
-  color: red;
-  font-size: 12px;
-  margin: -10px;
-}
-
-
-
-/* archiecture */
 
 
 
@@ -406,11 +391,11 @@ input[type=submit]:hover {
   width: 50vw;
   text-align: justify;
   padding: 60px;
-
+  
 }
 
 .booking-info p {
-
+  
   margin: 60px;
   padding: 60px;
   font-size: 22px;
@@ -418,10 +403,31 @@ input[type=submit]:hover {
 
 }
 
+.booking-content {
+  display: inline-table;
+  height: 30vw;
+  width: 10%;
+  padding: 80px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  margin: 0%;
 
-.booking input[type=text],
-[type=date],
-[type=time],
+
+}
+
+.booking-content span {
+  color: red;
+  font-size: 12px;
+  margin: -10px;
+}
+
+.booking-content textarea {
+  resize: none;
+  width: 30vw;
+  height: 150px;
+}
+
+.booking input[type=text],[type=date],[type=time],
 select {
   width: 30vw;
   padding: 8px;
@@ -450,36 +456,84 @@ input[type=submit]:hover {
 
 }
 
-.booking-content textarea {
-  resize: none;
+
+/* Interior Designing */
+.projects_heading{
+  
+  margin-top: 1%;
+}
+
+.projects_heading p{
+  text-align: center;
+  font-size: 22px;
+  text-decoration: underline;
+}
+
+.projects {
+
+  overflow: hidden;
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 25px;
+  padding: 40px;
+
+
+
+}
+
+.projects img {
   width: 30vw;
-  height: 150px;
+  height: auto;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+
+}
+
+.projects p {
+  text-align: center;
+  font-size: 18px;
+}
+
+.projects img:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+
+.projects:hover .projects_overlay {
+  opacity: 1;
 }
 
 
 
-.booking-content {
-  display: inline-table;
-  height: 30vw;
-  width: 10%;
-  padding: 80px;
-  border-radius: 5px;
-  background-color: #ffffff;
-  margin: 0%;
+/* Project Gallery */
 
+.display {
+
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  overflow-y: auto;
+  gap: 20px;
+  text-align: center;
+  font-size: 18px;
+  
+}
+
+.display img {
+  height: auto;
 
 }
 
-.booking-content span {
-  color: red;
-  font-size: 12px;
-  margin: -10px;
+.display_heading p {
+  
+  text-align: center;
+  
 }
-
-
-
-/* footer */
-
+ /* footer */
 .footer p {
 
   text-align: center;
@@ -563,75 +617,9 @@ input[type=submit]:hover {
   font-weight: 200;
 }
 
-/* Interior Designing */
-.projects {
-
-  overflow: hidden;
-  display: flex;
-  position: relative;
-  flex-wrap: wrap;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 25px;
-  padding: 30px;
-
-
-
-}
-
-.projects img {
-  width: 30vw;
-  height: auto;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
-
-}
-
-.projects p {
-  text-align: center;
-  font-size: 16px;
-}
-
-.projects img:hover {
-  cursor: pointer;
-  transform: scale(1.05);
-}
-
-
-.projects:hover .projects_overlay {
-  opacity: 1;
-}
-
-
-
-/* Project Gallery */
-
-.display {
-
-  padding: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  overflow-y: auto;
-  gap: 20px;
-  text-align: center;
-  font-size: 18px;
-
-}
-
-.display img {
-  height: auto;
-
-}
-
-.display_heading p {
-
-  text-align: center;
-
-}
-
 /* ----------------------Mobile view ----------------------------------------------------------*/
 @media (max-width:1000px) {
-
+  
   html,
   body {
     margin: 0;
@@ -727,14 +715,14 @@ input[type=submit]:hover {
 
   .contact-content textarea {
     resize: none;
-    width: 96vw;
+    width: 94vw;
     height: 150px;
     border: 1px solid #ccc;
   }
 
   input[type=submit] {
     background-color: #000000;
-    width: 96vw;
+    width: 94vw;
     color: white;
     padding: 12px 20px;
     cursor: pointer;

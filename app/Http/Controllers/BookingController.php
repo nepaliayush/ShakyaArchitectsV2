@@ -57,6 +57,7 @@ public function edit($id)
 public function updateBooking(Request $request, $id)
 {
     $bookings = Booking::find($id);
+    
         $bookings->name = $request->input('name');
         $bookings->email = $request->input('email');
         $bookings->phone = $request->input('phone');
@@ -67,7 +68,7 @@ public function updateBooking(Request $request, $id)
         $bookings->status= $request->input('status');
         $bookings->update();
         alert()->success('Booking updated Successfully','We have updated your booking');
-        return redirect()->back();
+        return  redirect()->back();
 }
 
 }

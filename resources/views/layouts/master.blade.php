@@ -12,7 +12,7 @@
 =========================================================
 
  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.  -->
- <!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="en">
 
@@ -22,7 +22,8 @@
     <link rel="icon" type="image/png" href="../assets/img/favicon.ico">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>Shakya Architects</title>
-    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
+        name='viewport' />
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
@@ -31,7 +32,7 @@
     <link href="../assets/css/light-bootstrap-dashboard.css?v=2.0.0 " rel="stylesheet" />
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link href="../assets/css/demo.css" rel="stylesheet" />
-    
+
 </head>
 
 <body>
@@ -44,14 +45,14 @@
     -->
             <div class="sidebar-wrapper">
                 <div class="logo">
-                    <a href="http://www.creative-tim.com" class="simple-text">
+                    <a href="home" class="simple-text">
                         Shakya Architects
                     </a>
                 </div>
                 <ul class="nav">
                     <li class="nav-item active">
                         <a class="nav-link" href="contactus">
-                        <i class="nc-icon nc-notes"></i>
+                            <i class="nc-icon nc-notes"></i>
                             <p>Contact Us</p>
                         </a>
                     </li>
@@ -63,42 +64,42 @@
                     </li>
                     <li>
                         <a class="nav-link" href="architectureupload">
-                        <i class="nc-icon nc-cloud-upload-94"></i>
+                            <i class="nc-icon nc-cloud-upload-94"></i>
                             <p>Architecture </p>
                         </a>
                     </li>
                     <li>
                         <a class="nav-link" href="interiordesigningupload">
-                        <i class="nc-icon nc-cloud-upload-94"></i>
+                            <i class="nc-icon nc-cloud-upload-94"></i>
                             <p>Interior Designing </p>
                         </a>
                     </li>
                     <li>
                         <a class="nav-link" href="interiorproductupload">
-                        <i class="nc-icon nc-cloud-upload-94"></i>
+                            <i class="nc-icon nc-cloud-upload-94"></i>
                             <p>Interior Product </p>
                         </a>
                     </li>
                     <li>
                         <a class="nav-link" href="sanitaryupload">
-                        <i class="nc-icon nc-cloud-upload-94"></i>
+                            <i class="nc-icon nc-cloud-upload-94"></i>
                             <p>Sanitary</p>
                         </a>
                     </li>
                     <li>
-                    <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();	
+                        <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();	
                                                      document.getElementById('logout-form').submit();">
-                                                     <i class="nc-icon nc-single-02"></i>
-                        <p>{{ __('Logout') }}</p>
+                            <i class="nc-icon nc-single-02"></i>
+                            <p>{{ __('Logout') }}</p>
 
 
-                    </a>
+                        </a>
 
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                        @csrf
-                    </form>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
                     </li>
-                   
+
                 </ul>
             </div>
         </div>
@@ -107,7 +108,8 @@
             <nav class="navbar navbar-expand-lg " color-on-scroll="500">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="#pablo"> Dashboard </a>
-                    <button href="" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+                    <button href="" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                        aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-bar burger-lines"></span>
                         <span class="navbar-toggler-bar burger-lines"></span>
                         <span class="navbar-toggler-bar burger-lines"></span>
@@ -115,13 +117,13 @@
                     <div class="collapse navbar-collapse justify-content-end" id="navigation">
                         <ul class="nav navbar-nav mr-auto">
                             <li class="nav-item">
-                                <a href="#" class="nav-link" data-toggle="dropdown">
-                                 
+                                <a href="dashboard" class="nav-link" data-toggle="dropdown">
+
                                     <span class="d-lg-none">Dashboard</span>
                                 </a>
                             </li>
-                      
-                    
+
+
                     </div>
                 </div>
             </nav>
@@ -130,18 +132,18 @@
             <footer class="footer">
                 <div class="container-fluid">
                     <nav>
-                       
+                        
                         <p class="copyright text-center">
                             ©
                             <script>
                                 document.write(new Date().getFullYear())
                             </script>
-                            Shakya Architects Pvt. Ltd.
+                            <a href="home">Shakya Architects Pvt.Ltd.</a>
                         </p>
                     </nav>
                 </div>
             </footer>
-           
+
         </div>
     </div>
     <!--   -->
@@ -241,13 +243,13 @@
 <!-- Light Bootstrap Dashboard DEMO methods, don't include it in your project! -->
 <script src="../assets/js/demo.js"></script>
 <script type="text/javascript">
-    $(document).ready(function() {
-        // Javascript method's body can be found in assets/js/demos.js
-        demo.initDashboardPageCharts();
+$(document).ready(function() {
+    // Javascript method's body can be found in assets/js/demos.js
+    demo.initDashboardPageCharts();
 
-        demo.showNotification();
+    demo.showNotification();
 
-    });
+});
 </script>
 
 </html>

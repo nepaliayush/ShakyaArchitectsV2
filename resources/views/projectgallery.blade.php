@@ -12,7 +12,7 @@
 
 <body>
         <div class="display_heading">
-        <p>Image Gallery</p>
+        <b><p>Image Gallery</p></b>
         </div>
 
     <div class="display">

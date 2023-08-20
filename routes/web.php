@@ -86,6 +86,7 @@ Route::group(['middleware'=>"web"],function(){
     Route::get('/projectgallery/{id}', [ServiceController::class, 'getArchitecture'])->name('image');
 
   
+   
     
 
 
