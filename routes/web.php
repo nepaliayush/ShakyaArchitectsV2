@@ -21,12 +21,16 @@ use App\Http\Controllers\InteriorDesigningController;
 |
 */
 
-Route::get('/', function () {
-    return view('landing');
-});
+// Route::get('/', function () {
+//     return view('landing');
+// });
 Route::get('/home', function () {
     return view('landing');
 });
+Route::get('/', function () {
+    return view('homee');
+});
+
 
 Route::get('projectgallery', function () {
     return view('projectgallery');

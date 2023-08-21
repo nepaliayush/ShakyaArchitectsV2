@@ -69,7 +69,7 @@ class InteriordesigningController extends Controller
     public function getThumbnail(){
         $data= InteriorDesigning::All();
        // where('category','architecture')->get();
-        return view('interiordesigning',['data'=>$data]);
+        return view('architecture',['data'=>$data]);
         //return DB::select ("select * from services");
       }
     public function getInteriorDesigning($id){

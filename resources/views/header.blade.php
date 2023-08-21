@@ -1,58 +1,52 @@
 <!DOCTYPE html>
 <!-- Created By CodingLab - www.codinglabweb.com -->
 <html lang="en" dir="ltr">
-  <head>
+<head>
     <meta charset="utf-8">
-   <!--------- <title>Responsive Navigation Menu</title>------>
+    <!-- <title>Responsive Navigation Menu</title> -->
     <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  </head>
-  <body>
-  <div id="myNav" class="overlay">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <div class="overlay-content">
-    <a href="#about"onclick="closeNav()">About</a>
-    <a href="#services" onclick="closeNav()">Services</a>
-    <a href="#office"onclick="closeNav()">Office</a>
-    <a href="#booking"onclick="closeNav()">Appointments</a>
-    <a href="#contactus"onclick="closeNav()">Contact Us</a>
-    <a href="#socials"onclick="closeNav()">Socials</a>
-    <a href="admin"onclick="closeNav()">Admin Login</a>
-    
-  </div>
+</head>
+<body>
+<div id="myNav" class="overlay fixed inset-y-0 right-0  flex-col bg-gray-800 bg-opacity-80 z-50 hidden">
+    <div class="bg-slate-200 w-64 h-full overflow-y-auto p-4">
+        <a href="javascript:void(0)" class="closebtn text-gray-800 text-2xl" onclick="closeNav()">&times;</a>
+        <div class="overlay-content py-4">
+            <a href="#about" onclick="closeNav()" class="block text-gray-800 hover:text-blue-500 py-2">About</a>
+            <a href="#services" onclick="closeNav()" class="block text-gray-800 hover:text-blue-500 py-2">Services</a>
+            <a href="#office" onclick="closeNav()" class="block text-gray-800 hover:text-blue-500 py-2">Office</a>
+            <a href="#booking" onclick="closeNav()" class="block text-gray-800 hover:text-blue-500 py-2">Appointments</a>
+            <a href="#contactus" onclick="closeNav()" class="block text-gray-800 hover:text-blue-500 py-2">Contact Us</a>
+            <a href="#socials" onclick="closeNav()" class="block text-gray-800 hover:text-blue-500 py-2">Socials</a>
+            <a href="admin" onclick="closeNav()" class="block text-gray-800 hover:text-blue-500 py-2">Admin Login</a>
+        </div>
+    </div>
 </div>
 
-    <div class="nav">
-    <label for="active" class="menu-btn"><span></span></label>
-        <div class="nav-logo">
-        <a href="landing"><img src="/images/logo.png" alt="" srcset="" ></a>
+<div class="container mx-auto md:mx-auto p-5">
+    <nav class="flex items-center justify-between">
+        <div class="h-8 w-10">
+            <img src="/images/logo.png" alt="" srcset="">
         </div>
-        <div class="nav-text">
-        <span  onclick="openNav()">  Shakya Architects </span>
+        <ul class="flex space-x-6 text-xl font-semibold">
+            <li>Shakya Architects</li>
+        </ul>
+        <div>
+            <span class="flex space-x-6 text-xl font-semibold" onclick="openNav()">&#9776;</span>
         </div>
-        <div class="nav-button">
-        <span onclick="openNav()">&#9776;</span>
-        </div>
-       
-    </div>
-
-  
-
-  
-
-
-
+    </nav>
+</div>
 
 <script>
-function openNav() {
-  document.getElementById("myNav").style.width = "100%";
-}
+    function openNav() {
+        document.getElementById('myNav').classList.remove('hidden');
+    }
 
-function closeNav() {
-  document.getElementById("myNav").style.width = "0%";
-}
+    function closeNav() {
+        document.getElementById('myNav').classList.add('hidden');
+    }
 </script>
 
-  </body>
+</body>
 </html>

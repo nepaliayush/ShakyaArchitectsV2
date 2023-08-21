@@ -51,22 +51,10 @@
   
  </p>
        
-        </div>
-        
-        @endforeach  
-        <!-- <div class="projects_overlay">
-    <div class="text">  {{ $data->project_name }} <br><br>    </div>
-  </div> -->
-  
-  
-     
+        </div>        
+        @endforeach       
         @endforeach 
-<!-- @foreach($data as $datas)
 
-@foreach(explode(',', $data->thumbnail) as $path)
-  <img src="{{ asset($path) }}">
-  @endforeach 
-@endforeach  -->
 
          
 </div>                 
