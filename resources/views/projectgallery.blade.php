@@ -11,12 +11,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css">
 </head>
 
-<body class="bg-gray-100">
+<body>
     <div class="text-center ">
-    <h2 class="text-2xl font-semibold text-center mt-10"> Image Gallery</h2>
+    <h2 class="text-2xl font-semibold text-center mt-5"> Image Gallery</h2>
     </div>
 
-    <div class="flex flex-wrap justify-center gap-4 p-8">
+    <div class="flex flex-wrap justify-center gap-4 p-2">
         @foreach ($data as $images)
         @php
         $imageArray = explode('|', $images);

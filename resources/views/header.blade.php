@@ -9,11 +9,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-<div id="myNav" class="overlay fixed inset-y-0 right-0  flex-col bg-gray-800 bg-opacity-80 z-50 hidden">
-    <div class="bg-slate-200 w-64 h-full overflow-y-auto p-4">
-        <a href="javascript:void(0)" class="closebtn text-gray-800 text-2xl" onclick="closeNav()">&times;</a>
+<div id="myNav" class="w-screen fixed inset-y-0 right-0  flex-col bg-gray-800 bg-opacity-80 z-50 hidden">
+    <div class=" w-64 text-2xl text-left bg-white h-full overflow-y-auto px-10 pt-5">
+        <a href="javascript:void(0)" class="closebtn  text-gray-800 text-2xl" onclick="closeNav()">&times;</a>
         <div class="overlay-content py-4">
-            <a href="#about" onclick="closeNav()" class="block text-gray-800 hover:text-blue-500 py-2">About</a>
+            <a href="homee#about" onclick="closeNav()" class="block text-gray-800 hover:text-red-500 py-2">About</a>
             <a href="#services" onclick="closeNav()" class="block text-gray-800 hover:text-blue-500 py-2">Services</a>
             <a href="#office" onclick="closeNav()" class="block text-gray-800 hover:text-blue-500 py-2">Office</a>
             <a href="#booking" onclick="closeNav()" class="block text-gray-800 hover:text-blue-500 py-2">Appointments</a>
@@ -33,7 +33,7 @@
             <li>Shakya Architects</li>
         </ul>
         <div>
-            <span class="flex space-x-6 text-xl font-semibold" onclick="openNav()">&#9776;</span>
+            <span class="flex space-x-6 text-xl font-extrabold" onclick="openNav()">&#9776;</span>
         </div>
     </nav>
 </div>

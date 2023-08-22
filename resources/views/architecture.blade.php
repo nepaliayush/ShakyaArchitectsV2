@@ -23,17 +23,17 @@ galleryItems.forEach(item => {
 </script>
 
 <body>
-<h2 class="text-2xl font-semibold text-center mt-10"> Projects</h2>
-<div class="aspect-ratio grid grid-cols-1  md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5 p-5">
+<h2 class="text-2xl font-semibold text-center my-5"> Projects</h2>
+<div class="aspect-ratio grid grid-cols-1  p-0   md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5 ">
 
     @foreach ($data as $item)
         @foreach (explode(',', $item->thumbnail) as $path)
-            <div class="w-full p-4">
+            <div class="w-full px-4">
                 <div class="group relative overflow-hidden hover:scale-105 transform transition-all duration-300">
                     <a href="projectgallery/{{$item->id}}">
                         <img class="w-full h-auto md:w-35vw transition-transform ease-in-out duration-300 transform group-hover:scale-105" src="{{ asset($path) }}" alt="">
                     </a>
-                    <p class="mt-2 text-center">{{ $item->project_name }}</p>
+                    <p class="mt-2 mb-0 text-center">{{ $item->project_name }}</p>
                 </div>
             </div>
         @endforeach

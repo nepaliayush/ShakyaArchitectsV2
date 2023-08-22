@@ -14,7 +14,7 @@
         <!-- Your content here -->
     </div>
 
-    <footer class="text-center ">
+    <footer class="text-center text-sm">
         <p>
             ©
             <script>

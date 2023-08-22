@@ -29,9 +29,13 @@
 
     </div> -->
     <!-- main -->
+    <section id="swiper">
+
+
+    <div class="aspect-ratio flex flex-col ">
     <div class="swiper">
             <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="/images/1.jpg" alt="" srcset=""></div>
+                <div class="swiper-slide "><img src="/images/1.jpg" alt="" srcset=""></div>
                 <div class="swiper-slide"><img src="/images/3.jpg" alt="" srcset=""></div>
                 <div class="swiper-slide"><img src="/images/4.jpg" alt="" srcset=""></div>
                 <div class="swiper-slide"><img src="/images/5.jpg" alt="" srcset=""></div>
@@ -51,14 +55,18 @@
 
 
         </div>
+    </div>
+    </section>
+
+    <section id="about">
 
         <div class="aspect-ratio flex flex-col md:flex-row p-2 mt-5">
     <div class="md:w-1/2">
-        <img src="/images/aboutus.jpg" alt="">
+        <img src="/images/aboutus.svg" alt="">
     </div>
-    <div class="md:w-1/2 md:px-0"> <!-- Added px-4 for padding -->
-    <h2 class="text-2xl font-semibold text-center  mb-4">About Us</h2>
-        <p class="md:mt-5 md:m-5 text-justify">
+    <div class=" mt-20 md:w-1/2 md:px-0 md:justify-center"> <!-- Added px-4 for padding -->
+    <h2 class=" text-2xl font-semibold text-center  mb-4">About Us</h2>
+        <p class=" md:mt-5 md:m-5 text-justify   ">
             Shakya Architects is a design, architecture and consulting firm that specializes in creating innovative
             and sustainable building designs that promote Nepali/Newari architecture. They offer a wide range of
             architectural and engineering services including conceptual design, master planning, interior design,
@@ -68,6 +76,12 @@
         </p>
     </div>
 </div>
+
+</section>
+
+<section id="services">
+
+
     <div class="aspect-ratio flex mt-5 p-2 flex-col md:flex-row gap-10">
         <div class="text-center">
             <h2 class="text-2xl font-semibold mb-4">Services</h2>
@@ -102,21 +116,25 @@
                 </div>
             </div>
 
+            </section>
 
+            <section id ="office">
+
+            
             <div class="aspect-ratio flex flex-col p-3 md:flex-row mt-10 md:mt-5 ">
 
 
-                <div class="md:w-1/2 p-20 md:p-20">
+                <div class=" text-center  md:w-1/2  md:p-20">
 
-                    <h2 class="text-2xl font-semibold mb:mt-10">Visit Us</h2><br>
-                    <p class="mt-0">
+                    <h2 class="text-2xl font-semibold mb:mt-5">Visit Us</h2><br>
+                    <p class="mt-0 ">
                         Freak Street, Kathmandu <br>
                         Opening hours 10:00 - 5:00
                     </p>
                 </div>
                 <div class="md:w-1/2">
 
-                    <iframe class="w-full h-36 sm:h-56 md:h-64 lg:h-72 xl:h-80"
+                    <iframe class="w-full  sm:h-56 md:h-64 lg:h-72 xl:h-80"
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.507873271778!2d85.3051469115756!3d27.70160132564458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19fd7f0d44b9%3A0xfcfd1e8198d7a6b!2sShakya%20Architects%20Pvt.%20Ltd.!5e0!3m2!1sen!2snp!4v1683023962840!5m2!1sen!2snp"
                         allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
@@ -125,12 +143,16 @@
             </div>
         </div>
 </div>
+</section>
+<section id="booking">
+
+
 <div class="aspect-ratio flex flex-col p-3 md:flex-row mt-5 ">
 
-<div class="md:w-1/2">
-        <div class="m-15 md:m-20">
+<div class="md:w-1/2 justify-center">
+        <div class="m-15 md:m-20  ">
         <h2 class="text-2xl font-semibold text-center mb-10">My Timings</h2>
-            <p class="space-y-2">
+            <p class="m-11  first-letter:space-y-3">
                 <i class="fas fa-calendar text-black"></i> Sunday: 10:00 AM - 5:00 PM <br>
                 <i class="fas fa-calendar text-black"></i> Monday: 10:00 AM - 5:00 PM <br>
                 <i class="fas fa-calendar text-black"></i> Tuesday: 10:00 AM - 5:00 PM <br>
@@ -144,7 +166,7 @@
         
 </div>
 <div class="md:w-1/2 md:mt-0">
-        <form class="m-5 md:m-0  space-y-3" method="POST" action="/bookingform">
+        <form class=" md:m-0  space-y-3" method="POST" action="/bookingform">
             @csrf
             <h2 class="text-2xl font-semibold text-center mt-5">Fill The Form</h2>
             <div>
@@ -165,28 +187,28 @@
             <div>
                 <label class="block font-semibold" for="email">Phone Number:</label>
                 <input type="text" name="phone" class="w-full px-3 py-2 border rounded-md">
-                @error('email')
+                @error('phone')
                 <span class="text-red-500">{{ $message }}</span>
                 @enderror
             </div>
             <div>
                 <label class="block font-semibold" for="email">Subject:</label>
                 <input type="text" name="subject" class="w-full px-3 py-2 border rounded-md">
-                @error('email')
+                @error('subject')
                 <span class="text-red-500">{{ $message }}</span>
                 @enderror
             </div>
             <div>
                 <label class="block font-semibold" for="email">Date:</label>
                 <input type="date" name="date" class="w-full sm-auto px-3 py-2 border rounded-md">
-                @error('email')
+                @error('date')
                 <span class="text-red-500">{{ $message }}</span>
                 @enderror
             </div>
             <div>
                 <label class="block font-semibold" for="email">Time:</label>
                 <input type="time" name="time" class="w-full px-3 py-2 border rounded-md">
-                @error('email')
+                @error('time')
                 <span class="text-red-500">{{ $message }}</span>
                 @enderror
             </div>
@@ -206,6 +228,10 @@
   
         
 </div>
+</section>
+<section id="contactus">
+
+
 <div class="aspect-ratio flex flex-col items-center justify-center p-3 md:flex-row mt-5">
     <form class="w-full md:w-1/2 m-5 md:m-0 space-y-3" method="POST" action="/landing/store">
         <h2 class="text-2xl font-semibold text-center mt-5">Contact Us</h2>
@@ -246,11 +272,14 @@
         </button>
     </form>
 </div>
+</section>
+<section id="socials">
+
 
 <div class="aspect-ratio flex flex-col  p-3 md:flex-row mt-5 ">
     <div class="w-full">
     <h2 class="text-2xl font-semibold text-center mt-5"> Our Socials</h2>
-<img src="images/social.jpg" alt="">
+<img class="h-auto w-auto" src="images/social.jpg" alt="">
 <ul class="flex justify-center text-xl mt-3 space-x-6">
             <li>
                 <a href="https://www.facebook.com/shakyaarchi" class="text-black hover:text-blue-500">
@@ -276,7 +305,7 @@
     </div>
 
 </div>
-
+</section>
 </body>
 
 </html>
