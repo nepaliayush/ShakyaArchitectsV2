@@ -8,8 +8,9 @@ use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SanitaryController;
 use App\Http\Controllers\InteriorProductController;
 use App\Http\Controllers\InteriorDesigningController;
-
-
+use App\Http\Controllers\YoutubeController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\CombinedDataController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,9 +25,9 @@ use App\Http\Controllers\InteriorDesigningController;
 // Route::get('/', function () {
 //     return view('landing');
 // });
-Route::get('/homee', function () {
-    return view('homee');
-});
+// Route::get('/homee', function () {
+//     return view('homee');
+// });
 Route::get('/', function () {
     return view('homee');
 });
@@ -88,10 +89,11 @@ Route::group(['middleware'=>"web"],function(){
     Route::get('/sanitary/', [SanitaryController::class, 'getSanitary'])->name('image');
     Route::get('/projectgallery/{id}', [ServiceController::class, 'getInteriorDesigning'])->name('image');
     Route::get('/projectgallery/{id}', [ServiceController::class, 'getArchitecture'])->name('image');
+// Route::get('/homee', [YoutubeController::class, 'fetchVideos']);
+//  Route::get('/homee', [InteriorDesigningController::class, 'getprojects'])->name('image');
+//  Route::get('/homee', [ArchitectureController::class, 'getaprojects'])->name('image');
+Route::get('/homee', [CombinedDataController::class, 'showCombinedData'])->name('homee');
 
-  
-   
-    
 
 
 

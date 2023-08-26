@@ -66,6 +66,10 @@ public function uploadArchitecture(Request $request)
         return view('architecture',['data'=>$data]);
         //return DB::select ("select * from services");
       }
-
+      public function getaProjects(){
+        $data= Architecture::whereIn('id', [1, 2, 3, 4, 5, 7,8])->get();
+        return view('homee', ['data' => $data]);
+    }
+    
 }
 

@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use App\Models\InteriorDesigning;
 use Illuminate\Support\Facades\Auth;
@@ -100,6 +99,10 @@ class InteriordesigningController extends Controller
     // }
 
     // return view('projectgallery', compact('imagesByIDs'));  
+}
+public function getProjects(){
+    $architecture= InteriorDesigning::whereIn('id', [1, 2, 3, 4, 5, 7,8])->get();
+    return view('homee', ['architecture' => $architecture]);
 }
 
 }
