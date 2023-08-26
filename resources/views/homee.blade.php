@@ -13,6 +13,32 @@
 
 <body>
     @include('sweetalert::alert')
+    <div class="aspect ratio">
+  <nav class="flex items-center justify-between">
+    <div>
+      <p class="text-left ml-0 bg-yellow-600">__________________________________________</p>
+      <p>__________________________________________</p>
+      <p>__________________________________________</p>
+    </div>
+    <div class="flex flex-col items-center">
+      <div class="h-20 w-20 text-center">
+        <img src="/images/logo.png" alt="" srcset="">
+      </div>
+      <h1 class="text-center text-3xl">SHAKYA ARCHITECTS</h1>
+      <h2 class="text-center text-xl text-yellow-600">WE DESIGN YOUR DREAMS</h2>
+      <p class="text-center text-yellow-600">
+        +977-9808758450 <br>
+        mail4shakyaaarchi@gmail.com <br>
+        Basantapur, Kathmandu
+      </p>
+    </div>
+    <div>
+      <p>__________________________________________</p>
+      <p>__________________________________________</p>
+      <p>__________________________________________</p>
+    </div>
+  </nav>
+</div>
     <!-- <div class=" md:container md:mx-auto p-3t">
         <nav class=" flex items-center justify-between">
             <div class="h-8 w-11">
@@ -62,14 +88,16 @@
     <section id="about">
         <div class="flex flex-col md:flex-row p-2 mt-5">
             <div class="md:w-1/2 ">
-               
-            @foreach ($youtubeData as $video)
+
+                @foreach($youtubeData as $video)
+
                 <div class="iframe-container">
                     <iframe class="responsive-iframe" src="https://www.youtube.com/embed/{{ $video['videoId'] }}"
                         frameborder="0" allowfullscreen></iframe>
                 </div>
                 <!-- <p>{{ $video['title'] }}</p> -->
                 @endforeach
+            </div>
 
 
             <div class="md:w-1/2 md:px-0 md:justify-center">
@@ -92,43 +120,42 @@
         <div class="text-center">
             <h2 class="text-2xl font-semibold mb-4">Projects</h2>
         </div>
-        <div>
+        <div class="m-5">
             <p>Architecture</p>
         </div>
         <div class="aspect-ratio grid grid-cols-1 p-0 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
-    @foreach ($architecture as $item)
-        @if (isset($item->thumbnail))
-            @foreach (explode(',', $item->thumbnail) as $path)
-                <div class="w-full px-4">
-                    <div class="group relative overflow-hidden hover:scale-105 transform transition-all duration-300">
-                        <a href="projectgallery/{{ $item->id }}">
-                            <img class="w-full h-auto md:w-35vw transition-transform ease-in-out duration-300 transform group-hover:scale-105"
-                                src="{{ asset($path) }}" alt="">
-                        </a>
-                        <p class="mt-2 mb-0 text-center">{{ $item->project_name }}</p>
-                    </div>
-                </div>
-            @endforeach
-        @endif
-    @endforeach
-</div>
-
-                <p><a href="architecture"> See more</a></p>
-            </div>
-        </div>
-        <div>
-            <p>Interior Designing</p>
-        </div>
-        <div class="aspect-ratio grid grid-cols-1  p-0   md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5 ">
-     
-        @foreach ($interiordesigning as $item)
+            @foreach ($architecture as $item)
             @if (isset($item->thumbnail))
             @foreach (explode(',', $item->thumbnail) as $path)
             <div class="w-full px-4">
-                <div class="group relative overflow-hidden hover:scale-105 transform transition-all duration-300">
+                <div class="group relative overflow-hidden ">
+                    <a href="projectgallery/{{ $item->id }}">
+                        <img class="w-full h-auto md:w-35vw >" src="{{ asset($path) }}" alt="">
+                    </a>
+                    <p class="mt-2 mb-0 text-center">{{ $item->project_name }}</p>
+                </div>
+            </div>
+            @endforeach
+            @endif
+            @endforeach
+        </div>
+
+        <p  class="m-5 text-end"><a href="architecture"> See more</a></p>
+        
+
+
+        <div class="m-5">
+            <p>Interior Designing</p>
+        </div>
+        <div class="aspect-ratio grid grid-cols-1  p-0   md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5 ">
+
+            @foreach ($interiordesigning as $item)
+            @if (isset($item->thumbnail))
+            @foreach (explode(',', $item->thumbnail) as $path)
+            <div class="w-full px-4">
+                <div class="group relative overflow-hidden ">
                     <a href="projectgallery/{{$item->id}}">
-                        <img class="w-full h-auto md:w-35vw transition-transform ease-in-out duration-300 transform group-hover:scale-105"
-                            src="{{ asset($path) }}" alt="">
+                        <img class="w-full h-auto md:w-35vw " src="{{ asset($path) }}" alt="">
                     </a>
                     <p class="mt-2 mb-0 text-center">{{ $item->project_name }}</p>
                 </div>
@@ -137,11 +164,14 @@
             @endif
             @endforeach
 
-            <div>
-                <p><a href="interiordesignings"> See more</a></p>
-            </div>
+          
         </div>
-        <div>
+   
+                <p class=" m-5 text-end"><a href="interiordesigning"> See more</a></p>
+      
+
+
+        <div class="m-5">
             <p>Interior</p>
         </div>
         <div class="aspect-ratio grid grid-cols-1  p-0   md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5 ">
