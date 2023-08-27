@@ -13,29 +13,29 @@
 
 <body>
     @include('sweetalert::alert')
-    <div class="aspect ratio">
+    <div class="aspect ratio ">
   <nav class="flex items-center justify-between">
-    <div>
-      <p class="text-left ml-0 bg-yellow-600">__________________________________________</p>
-      <p>__________________________________________</p>
-      <p>__________________________________________</p>
+    <div class="space-y-5">
+    <hr class="w-10 md:w-80 border-2 border-yellow-600 "/>
+    <hr class="border-2 border-yellow-600  "/>
+    <hr class="border-2 border-yellow-600  "/>
     </div>
     <div class="flex flex-col items-center">
       <div class="h-20 w-20 text-center">
         <img src="/images/logo.png" alt="" srcset="">
       </div>
-      <h1 class="text-center text-3xl">SHAKYA ARCHITECTS</h1>
-      <h2 class="text-center text-xl text-yellow-600">WE DESIGN YOUR DREAMS</h2>
-      <p class="text-center text-yellow-600">
+      <h1 class="text-center text-xl">SHAKYA ARCHITECTS</h1>
+      <h2 class="text-center text-sm text-yellow-600">WE DESIGN YOUR DREAMS</h2>
+      <p class="text-center text-xs text-yellow-600">
         +977-9808758450 <br>
         mail4shakyaaarchi@gmail.com <br>
         Basantapur, Kathmandu
       </p>
     </div>
-    <div>
-      <p>__________________________________________</p>
-      <p>__________________________________________</p>
-      <p>__________________________________________</p>
+    <div class="space-y-5">
+    <hr class="w-10 md:w-80 border-2 border-yellow-600 "/>
+    <hr class="border-2 border-yellow-600  "/>
+    <hr class="border-2 border-yellow-600  "/>
     </div>
   </nav>
 </div>

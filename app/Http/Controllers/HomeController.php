@@ -25,7 +25,9 @@ class HomeController extends Controller
     {
         return view('dashboard');
     }
+    public function aaa() {
 
-    
+        return view('homee');
+    }
     
 }

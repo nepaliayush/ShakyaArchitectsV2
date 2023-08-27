@@ -28,9 +28,9 @@ use App\Http\Controllers\CombinedDataController;
 // Route::get('/homee', function () {
 //     return view('homee');
 // });
-Route::get('/', function () {
-    return view('homee');
-});
+// Route::get('/', function () {
+//     return view('homee');
+// });
 
 
 Route::get('projectgallery', function () {
@@ -92,7 +92,7 @@ Route::group(['middleware'=>"web"],function(){
 // Route::get('/homee', [YoutubeController::class, 'fetchVideos']);
 //  Route::get('/homee', [InteriorDesigningController::class, 'getprojects'])->name('image');
 //  Route::get('/homee', [ArchitectureController::class, 'getaprojects'])->name('image');
-Route::get('/homee', [CombinedDataController::class, 'showCombinedData'])->name('homee');
+Route::get('/', [CombinedDataController::class, 'showCombinedData'])->name('homee');
 
 
 
