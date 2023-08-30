@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -11,9 +11,6 @@
 
 <body class="flex flex-col min-h-screen">
     <div class="flex-grow container mx-auto flex flex-col justify-center items-center p-3 md:flex-row">
-        <!-- Your content here -->
-    </div>
-
     <footer class="text-center text-sm">
         <p>
             ©
@@ -23,6 +20,9 @@
             Shakya Architects Pvt. Ltd.
         </p>
     </footer>
+    </div>
+
+   
 </body>
 
-</html>
+</html> -->

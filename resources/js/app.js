@@ -6,7 +6,9 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import swal from 'sweetalert';
-
+import 'flowbite';
+import 'flowbite/dist/flowbite.css';
+import 'flowbite/dist/flowbite.js';
 
 // Initialize Swiper
 var swiper = new Swiper(".swiper", {

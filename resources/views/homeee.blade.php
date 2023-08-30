@@ -7,12 +7,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
     <title>Shakya Architects</title>
 
 </head>
 
-<body>]
+<body>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const openSidebarBtn = document.getElementById('openSidebarBtn');
+    const closeSidebarBtn = document.getElementById('closeSidebarBtn');
+    const sidebar = document.getElementById('logo-sidebar');
+    const sidebarBackdrop = document.getElementById('sidebarBackdrop');
+
+    function openSidebar() {
+        sidebar.classList.add('translate-x-0');
+        sidebarBackdrop.classList.remove('hidden');
+    }
+
+    function closeSidebar() {
+        sidebar.classList.remove('translate-x-0');
+        sidebarBackdrop.classList.add('hidden');
+    }
+
+    openSidebarBtn.addEventListener('click', openSidebar);
+
+    closeSidebarBtn.addEventListener('click', closeSidebar);
+
+    sidebarBackdrop.addEventListener('click', closeSidebar); // Close sidebar when backdrop is clicked
+});
+
+</script>
 
     @include('sweetalert::alert')
 
@@ -32,11 +56,117 @@
 
     </div> -->
     <!-- main -->
- 
+    <div id="sidebarBackdrop" class="fixed inset-0 bg-black opacity-50 z-30 hidden"></div>
+    <div class="flex items-center">
+    <h1 class="text-2xl font-semibold">Shakya Architects</h1>
+    <button id="openSidebarBtn" class="ml-3 p-2 text-gray-500 rounded-lg sm:hidden focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+        <span class="sr-only">Open sidebar</span>
+        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
+        </svg>
+    </button>
+</div>
 
-    <section id="swiper">
+<aside id="logo-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
+        <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
+        <div class="flex justify-end sm:hidden">
+            <button id="closeSidebarBtn" class="p-2 text-gray-500 hover:text-gray-700 focus:outline-none">
+                <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M14.35 14.35a.5.5 0 010-.7L10.71 10l3.64-3.64a.5.5 0 11.7.7L11.41 10l3.64 3.64a.5.5 0 01-.7.7L10 10.71l-3.64 3.64a.5.5 0 01-.7-.7L9.29 10 5.65 6.36a.5.5 0 01.7-.7L10 9.29l3.64-3.64a.5.5 0 01.7.7L10.71 10l3.64 3.64z" clip-rule="evenodd"/>
+                </svg>
+            </button>
+        </div>
+            <nav class=" mx-5 flex items-center ">
+
+                <div class="flex flex-col items-center ">
+                    <div class="h-20 w-20 text-center">
+                        <img src="/images/logo.png" alt="" srcset="">
+                    </div>
+                    <div class="mt-2 space-y-1">
+                        <h1 class="text-center text-xl font-semibold space-y-2">SHAKYA ARCHITECTS</h1>
+                        <h2 class="text-center text-sm font-semibold text-yellow-600">WE DESIGN YOUR DREAMS</h2>
+                        <p class=" text-center text-xs text-yellow-600">
+                            +977-9808758450 <br>
+                            mail4shakyaaarchi@gmail.com <br>
+                            Basantapur, Kathmandu
+                        </p>
+                    </div>
+
+                    <div class="m-5">
+                        <hr class="w-20 md:w-40   border-1 border-gray-600 " />
+                    </div>
+                </div>
 
 
+            </nav>
+            <ul class="space-y-2 font-medium">
+                <li class="group">
+                    <a href="#aboutus"
+                        class=" flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        <span id="aboutUsSpan" class="ml-3">About Us</span>
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="#projects"
+                        class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+
+                        <span class="flex-1 ml-3 whitespace-nowrap">Projects</span>
+
+                    </a>
+                </li>
+                <li>
+                    <a href="#services"
+                        class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+
+                        <span class="flex-1 ml-3 whitespace-nowrap">Services</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#office"
+                        class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+
+                        <span class="flex-1 ml-3 whitespace-nowrap">Office</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#booking"
+                        class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+
+                        <span class="flex-1 ml-3 whitespace-nowrap">Appointments</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#contactus"
+                        class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+
+                        <span class="flex-1 ml-3 whitespace-nowrap">Contact Us</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#socials"
+                        class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+
+                        <span class="flex-1 ml-3 whitespace-nowrap">Socials</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="admin"
+                        class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+
+                        <span class="flex-1 ml-3 whitespace-nowrap">Admin Login</span>
+                    </a>
+                </li>
+
+            </ul>
+            <hr>
+        </div>
+        </div>
+    </aside> 
+
+<div class="flex-1  md:ml-64 ">
+    <section id="swiper" >
         <div class="aspect-ratio flex flex-col ">
             <div class="swiper">
                 <div class="swiper-wrapper">
@@ -63,7 +193,7 @@
         </div>
     </section>
 
-    <section id="about">
+    <section id="aboutus">
         <div class="flex flex-col md:flex-row p-2 mt-5">
             <div class="md:w-1/2 ">
 
@@ -284,7 +414,7 @@
     <section id="booking">
 
 
-        <div class="aspect-ratio flex flex-col p-3 md:flex-row mt-5 ">
+        <div class="aspect-ratio  md:ml-64 flex flex-col p-3 md:flex-row mt-5 ">
 
             <div class="md:w-1/2 justify-center">
                 <div class="m-15 md:m-20  ">
@@ -303,20 +433,20 @@
                 </div>
 
             </div>
-            <div class="md:w-1/2 md:mt-0">
+            <div class="md:w-1/2 md:mt-0 ">
                 <form class=" md:m-0  space-y-3" method="POST" action="/bookingform">
                     @csrf
                     <h2 class="text-2xl font-semibold text-center mt-5">Fill The Form</h2>
                     <div>
                         <label class="block font-semibold" for="name">Name:</label>
-                        <input type="text" name="name" class="w-full px-3 py-2 border rounded-md">
+                        <input type="text" name="name" class="w-full px-3 py-2 border border-gray-300 rounded-md">
                         @error('name')
                         <span class="text-red-500">{{ $message }}</span>
                         @enderror
                     </div>
                     <div>
                         <label class="block font-semibold" for="email">Email:</label>
-                        <input type="text" name="email" class="w-full px-3 py-2 border rounded-md">
+                        <input type="text" name="email" class="w-full px-3 py-2 border border-gray-300 rounded-md">
                         @error('email')
                         <span class="text-red-500">{{ $message }}</span>
                         @enderror
@@ -324,35 +454,35 @@
                     <!-- Add similar code for other form fields -->
                     <div>
                         <label class="block font-semibold" for="email">Phone Number:</label>
-                        <input type="text" name="phone" class="w-full px-3 py-2 border rounded-md">
+                        <input type="text" name="phone" class="w-full px-3 py-2 border border-gray-300  rounded-md">
                         @error('phone')
                         <span class="text-red-500">{{ $message }}</span>
                         @enderror
                     </div>
                     <div>
                         <label class="block font-semibold" for="email">Subject:</label>
-                        <input type="text" name="subject" class="w-full px-3 py-2 border rounded-md">
+                        <input type="text" name="subject" class="w-full px-3 py-2 border border-gray-300 rounded-md">
                         @error('subject')
                         <span class="text-red-500">{{ $message }}</span>
                         @enderror
                     </div>
                     <div>
                         <label class="block font-semibold" for="email">Date:</label>
-                        <input type="date" name="date" class="w-full sm-auto px-3 py-2 border rounded-md">
+                        <input type="date" name="date" class="w-full sm-auto px-3 py-2 border border-gray-300  rounded-md">
                         @error('date')
                         <span class="text-red-500">{{ $message }}</span>
                         @enderror
                     </div>
                     <div>
                         <label class="block font-semibold" for="email">Time:</label>
-                        <input type="time" name="time" class="w-full px-3 py-2 border rounded-md">
+                        <input type="time" name="time" class="w-full px-3 py-2 border  border-gray-300 rounded-md">
                         @error('time')
                         <span class="text-red-500">{{ $message }}</span>
                         @enderror
                     </div>
                     <div>
                         <label class="block font-semibold" for="message">Message:</label>
-                        <textarea name="message" rows="4" class="w-full px-3 py-2 border rounded-md"></textarea>
+                        <textarea name="message" rows="4" class="w-full px-3 py-2 border border-gray-300 rounded-md"></textarea>
                         @error('message')
                         <span class="text-red-500">{{ $message }}</span>
                         @enderror
@@ -369,28 +499,28 @@
     </section>
     <section id="contactus">
 
-
-        <div class="aspect-ratio flex flex-col items-center justify-center p-3 md:flex-row mt-5">
+    
+        <div class="aspect-ratio md:ml-64 md:mx-105 flex flex-col items-center justify-center p-3 md:flex-row mt-5">
             <form class="w-full md:w-1/2 m-5 md:m-0 space-y-3" method="POST" action="/landing/store">
                 <h2 class="text-2xl font-semibold text-center mt-5">Contact Us</h2>
                 @csrf
                 <div>
                     <label class="block font-semibold" for="name">Name:</label>
-                    <input type="text" name="name" class="w-full px-3 py-2 border rounded-md">
+                    <input type="text" name="name" class="w-full px-3 py-2 border border-gray-300 rounded-md">
                     @error('name')
                     <span class="text-red-500">{{ $message }}</span>
                     @enderror
                 </div>
                 <div>
                     <label class="block font-semibold" for="email">Email:</label>
-                    <input type="text" name="email" class="w-full px-3 py-2 border rounded-md">
+                    <input type="text" name="email" class="w-full px-3 py-2 border border-gray-300  rounded-md">
                     @error('email')
                     <span class="text-red-500">{{ $message }}</span>
                     @enderror
                 </div>
                 <div>
                     <label class="block font-semibold" for="phone">Phone Number:</label>
-                    <input type="text" name="phone" class="w-full px-3 py-2 border rounded-md">
+                    <input type="text" name="phone" class="w-full px-3 py-2 border border-gray-300 rounded-md">
                     @error('phone')
                     <span class="text-red-500">{{ $message }}</span>
                     @enderror
@@ -399,7 +529,7 @@
 
                 <div>
                     <label class="block font-semibold" for="message">Message:</label>
-                    <textarea name="message" rows="4" class="w-full px-3 py-2 border rounded-md"></textarea>
+                    <textarea name="message" rows="4" class="w-full px-3 py-2 border border-gray-300 rounded-md"></textarea>
                     @error('message')
                     <span class="text-red-500">{{ $message }}</span>
                     @enderror
@@ -410,11 +540,12 @@
                 </button>
             </form>
         </div>
+        </div>
     </section>
     <section id="socials">
 
 
-        <div class="aspect-ratio flex flex-col  p-3 md:flex-row mt-5 ">
+        <div class="aspect-ratio md:ml-64  flex flex-col  p-3 md:flex-row mt-5 ">
             <div class="w-full">
                 <h2 class="text-2xl font-semibold text-center mt-5"> Our Socials</h2>
                 <img class="h-auto w-auto" src="images/social.jpg" alt="">
@@ -440,11 +571,15 @@
                         </a>
                     </li>
                 </ul>
+                
             </div>
 
         </div>
     </section>
+
+    sec
 </body>
 
+</div>
 </html>
 @endsection

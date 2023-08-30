@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-<div id="myNav" class="w-screen fixed inset-y-0 right-0  flex-col bg-gray-800 bg-opacity-80 z-50 hidden">
+<!-- <div id="myNav" class="w-screen fixed inset-y-0 right-0  flex-col bg-gray-800 bg-opacity-80 z-50 hidden">
     <div class=" w-64 text-2xl text-left bg-white h-full overflow-y-auto px-10 pt-5">
         <a href="javascript:void(0)" class="closebtn  text-gray-800 text-2xl" onclick="closeNav()">&times;</a>
         <div class="overlay-content py-4">
@@ -36,17 +36,35 @@
             <span class="flex space-x-6 text-xl font-extrabold" onclick="openNav()">&#9776;</span>
         </div>
     </nav>
-</div>
+</div> -->
+<!-- <div class="flex-1 md:ml-64  ">
+  <nav class="aspect-auto flex items-center justify-between">
+    <div class="space-y-5">
+    <hr class="w-10 md:w-40   border-2 border-yellow-600 "/>
+    <hr class="border-2 border-yellow-600  "/>
+    <hr class="border-2 border-yellow-600  "/>
+    </div>
+    <div class="flex flex-col items-center">
+      <div class="h-20 w-20 text-center">
+        <img src="/images/logo.png" alt="" srcset="">
+      </div>
+      <h1 class="text-center text-xl">SHAKYA ARCHITECTS</h1>
+      <h2 class="text-center text-sm text-yellow-600">WE DESIGN YOUR DREAMS</h2>
+      <p class="invisible md:visible text-center text-xs text-yellow-600">
+        +977-9808758450 <br>
+        mail4shakyaaarchi@gmail.com <br>
+        Basantapur, Kathmandu
+      </p>
+    </div>
+    <div class="space-y-5">
+    <hr class="w-10 md:w-40 border-2 border-yellow-600 "/>
+    <hr class="border-2 border-yellow-600  "/>
+    <hr class="border-2 border-yellow-600  "/>
+    </div>
+   
+  </nav>
+</div> -->
 
-<script>
-    function openNav() {
-        document.getElementById('myNav').classList.remove('hidden');
-    }
-
-    function closeNav() {
-        document.getElementById('myNav').classList.add('hidden');
-    }
-</script>
-
+<!--  -->
 </body>
 </html>

@@ -16,7 +16,7 @@ class CombinedDataController extends Controller
         $architecture = Architecture::whereIn('id', [1, 2, 3, 4, 5, 6])->get();
         $youtubeController = new YoutubeController();
         $youtubeData = $youtubeController->fetchVideos();
-        return view('homee', [
+        return view('homeee', [
             'youtubeData' => $youtubeData,
             'architecture' => $architecture,           
             'interiordesigning' => $interiordesigning,

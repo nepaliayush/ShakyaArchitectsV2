@@ -94,7 +94,7 @@ Route::group(['middleware'=>"web"],function(){
 //  Route::get('/homee', [ArchitectureController::class, 'getaprojects'])->name('image');
 Route::get('/', [CombinedDataController::class, 'showCombinedData'])->name('homee');
 
-
+Route::get('homeee', [CombinedDataController::class, 'showCombinedData'])->name('homee');
 
 
 }); 
