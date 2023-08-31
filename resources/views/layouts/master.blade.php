@@ -63,9 +63,9 @@
                         </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="architectureupload">
+                        <a class="nav-link" href="upload">
                             <i class="nc-icon nc-cloud-upload-94"></i>
-                            <p>Architecture </p>
+                            <p>Upload Images</p>
                         </a>
                     </li>
                     <li>

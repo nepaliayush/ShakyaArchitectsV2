@@ -60,16 +60,20 @@ public function uploadArchitecture(Request $request)
         return back() ;
     }
 
-    public function getArchitecture(){
-        $data= Architecture::All();
-       // where('category','architecture')->get();
-        return view('architecture',['data'=>$data]);
-        //return DB::select ("select * from services");
-      }
+    // public function getArchitecture(){
+    //     $data= Architecture::All();
+    //    // where('category','architecture')->get();
+    //     return view('architecture',['data'=>$data]);
+    //     //return DB::select ("select * from services");
+    //   }
       public function getaProjects(){
         $data= Architecture::whereIn('id', [1, 2, 3, 4, 5, 7,8])->get();
         return view('homee', ['data' => $data]);
     }
     
+    public function getArchitecture($id){
+        $data = DB::table('architectures')->where('id', $id)->pluck('image');
+        return view('projectgallery', compact('data'));
+    }
 }
 

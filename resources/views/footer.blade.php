@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!--  <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -26,3 +26,29 @@
 </body>
 
 </html> -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div class="aspect-ratio md:ml-64  flex flex-col  p-3 md:flex-row mt-5 ">
+    <footer>
+    <p class="text-center md:text-center"> 
+        ©
+            <script>
+                document.write(new Date().getFullYear())
+            </script>
+            Shakya Architects Pvt. Ltd.
+        </p>
+    </footer>
+    <div class="w-full r" >
+
+      
+    </div>
+</div>
+</body>
+</html> 
+ -->

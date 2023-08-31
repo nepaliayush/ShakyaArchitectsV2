@@ -38,10 +38,14 @@ Route::get('projectgallery', function () {
 
 });
 
+
 Route::get('dashboard', function () {
     return view('dashboard');
 })->middleware('auth');;
 
+Route::get('upload', function () {
+    return view('upload');
+})->middleware('auth');
 Route::get('architectureupload', function () {
     return view('architectureupload');
 })->middleware('auth');
@@ -75,7 +79,7 @@ Route::group(['middleware'=>"web"],function(){
     Route::post('/interiordesigningupload/upload',[ServiceController::class,'upload'])->name('interiordesigningupload')->middleware('auth');
     Route::post('/interiorproductupload/upload',[InteriorProductController::class,'uploadInteriorProduct'])->name('interiorproductupload')->middleware('auth');
     Route::post('/sanitaryupload/upload',[SanitaryController::class,'uploadSanitary'])->name('sanitaryupload')->middleware('auth');
-    
+    Route::post('/upload/upload',[ServiceController::class,'upload'])->name('upload')->middleware('auth');
    Route::get('/removecontact/{id}',[UserController::class,'contactdelete'])->name('remove');
  
     Route::post('/bookingform', [BookingController::class, 'booking'])->name('booking');
@@ -83,12 +87,16 @@ Route::group(['middleware'=>"web"],function(){
     Route::get('/deletebooking/{id}',[BookingController::class,'deleteBooking'])->name('remove');
     Route::get('editbooking/{id}', [BookingController::class, 'edit'])->name('edit');
     Route::put('/updatebooking/{id}', [BookingController::class, 'updateBooking'])->name('update');
+
     Route::get('/architecture/', [ServiceController::class, 'getArchitectureThumbnail'])->name('image');
-    Route::get('/interiordesigning/', [InteriorDesigningController::class, 'getThumbnail'])->name('image');
-    
+    Route::get('/interiordesigning/', [ServiceController::class, 'getInteriorThumbnail'])->name('image'); 
     Route::get('/sanitary/', [SanitaryController::class, 'getSanitary'])->name('image');
-    Route::get('/projectgallery/{id}', [ServiceController::class, 'getInteriorDesigning'])->name('image');
-    Route::get('/projectgallery/{id}', [ServiceController::class, 'getArchitecture'])->name('image');
+
+   Route::get('/projectgallery/interiordesigning/{id}', [ServiceController::class, 'getInteriorDesigning'])->name('interiorimage');
+ Route::get('/projectgallery/architecture/{id}', [ServiceController::class, 'getArchitecture'])->name('architectureimage');
+
+
+
 // Route::get('/homee', [YoutubeController::class, 'fetchVideos']);
 //  Route::get('/homee', [InteriorDesigningController::class, 'getprojects'])->name('image');
 //  Route::get('/homee', [ArchitectureController::class, 'getaprojects'])->name('image');

@@ -71,38 +71,10 @@ class InteriordesigningController extends Controller
         return view('architecture',['data'=>$data]);
         //return DB::select ("select * from services");
       }
-    public function getInteriorDesigning($id){
-        //$data=InteriorDesigning::find($id);
-        // $ids = DB::table('interiordesignings')->pluck('id');
-         //$data=DB::table('interiordesignings')->pluck('image');
-        //$data= InteriorDesigning::All();
-       // where('category','architecture')->get();
-        //return view('projectgallery',['data'=>$data]);
-       // return DB::select ("select * from services");
-    //     $data = DB::table('interiordesignings')->pluck('id', 'image');
+   
 
-    //     $images = [];
-    
-    //     foreach ($data as $image) {
-    //         $images[] = explode(',', $image);
-    //     }
-    
-    //     return view('projectgallery', compact('images'));
-    $data = DB::table('interiordesignings')->where('id', $id)->pluck('image');
-    return view('projectgallery', compact('data'));
-    // $data = DB::table('interiordesignings')->select('id', 'image')->get();
-
-    // $imagesByIDs = [];
-
-    // foreach ($data as $item) {
-    //     $imagesByIDs[$item->id] = explode(',', $item->image);
-    // }
-
-    // return view('projectgallery', compact('imagesByIDs'));  
-}
-public function getProjects(){
-    $architecture= InteriorDesigning::whereIn('id', [1, 2, 3, 4, 5, 7,8])->get();
-    return view('homee', ['architecture' => $architecture]);
-}
-
+      public function getInteriorDesigning($id){
+        $data = DB::table('interiordesignings')->where('id', $id)->pluck('image');
+        return view('projectgallery', compact('data'));
+    }
 }

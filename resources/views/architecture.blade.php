@@ -30,7 +30,7 @@ galleryItems.forEach(item => {
         @foreach (explode(',', $item->thumbnail) as $path)
             <div class="w-full px-4">
                 <div class="group relative overflow-hidden hover:scale-105 transform transition-all duration-300">
-                    <a href="projectgallery/{{$item->id}}">
+                    <a href="projectgallery/architecture/{{$item->id}}">
                         <img class="w-full h-auto md:w-35vw transition-transform ease-in-out duration-300 transform group-hover:scale-105" src="{{ asset($path) }}" alt="">
                     </a>
                     <p class="mt-2 mb-0 text-center">{{ $item->project_name }}</p>

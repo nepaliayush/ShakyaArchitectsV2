@@ -80,13 +80,29 @@ class ServiceController extends Controller
         break;
 
     case 'interiordesigning':
-        DB::table('table2')->insert([
+        DB::table('interiordesignings')->insert([
           'project_name'=>$request->project_name,
           'details'=>$request->details,
           'image' => implode('|', $image),
           'thumbnail' => implode('|', $thumbnail),
         ]);
         break;
+        case 'interiorproducts':
+          DB::table('interiorproducts')->insert([
+            'project_name'=>$request->project_name,
+            'details'=>$request->details,
+            'image' => implode('|', $image),
+            'thumbnail' => implode('|', $thumbnail),
+          ]);
+          break;
+          case 'sanitary':
+            DB::table('sanitarys')->insert([
+              'project_name'=>$request->project_name,
+              'details'=>$request->details,
+              'image' => implode('|', $image),
+              'thumbnail' => implode('|', $thumbnail),
+            ]);
+            break;
     // Add cases for other tables
     default:
         // Handle invalid table selection
@@ -109,26 +125,30 @@ class ServiceController extends Controller
   //   ]);
   //       return back() ;
   }
+  
+  
+  public function getArchitectureThumbnail(){
+    $data= Architecture::All();
+    // where('category','architecture')->get();
+    return view('architecture',['data'=>$data]);
+    //return DB::select ("select * from services");
+  }
+  
+
   public function getInteriorThumbnail(){
     $data= InteriorDesigning::All();
    // where('category','architecture')->get();
     return view('interiordesigning',['data'=>$data]);
     //return DB::select ("select * from services");
   }
+  
+  public function getArchitecture($id){
+    $data = DB::table('architectures')->where('id', $id)->pluck('image');
+    return view('projectgallery', compact('data'));
+  }
 
-//   public function getInteriorDesigning($id){
-//   $data = DB::table('interiordesignings')->where('id', $id)->pluck('image');
-//   return view('projectgallery', compact('data'));
-// }
-public function getArchitectureThumbnail(){
-  $data= Architecture::All();
- // where('category','architecture')->get();
-  return view('architecture',['data'=>$data]);
-  //return DB::select ("select * from services");
-}
-
-public function getArchitecture($id){
-$data = DB::table('architectures')->where('id', $id)->pluck('image');
-return view('projectgallery', compact('data'));
+  public function getInteriorDesigning($id){
+    $data = DB::table('interiordesignings')->where('id', $id)->pluck('image');
+    return view('projectgallery', compact('data'));
 }
 }
