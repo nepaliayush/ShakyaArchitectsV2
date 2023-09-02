@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('project_name');
             $table->string('details');
+            $table->text('thumbnail')->nullable();; 
             $table->string('image')->nullable();;
             $table->timestamps();
         });

@@ -12,7 +12,7 @@ class Architecture extends Model
    
     use HasFactory;
     protected $table='architectures';
-    protected $fillable=['project_name','details','image'];
+    protected $fillable=['project_name','details','thumbnail','image'];
   
     public function setFilenamesAttribute($value)
     {

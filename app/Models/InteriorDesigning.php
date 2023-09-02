@@ -9,7 +9,7 @@ class InteriorDesigning extends Model
 {
     use HasFactory;
     protected $table='interiordesignings';
-    protected $fillable=['project_name','details','image'];
+    protected $fillable=['project_name','details','thumbnail','image'];
   
     public function setFilenamesAttribute($value)
     {

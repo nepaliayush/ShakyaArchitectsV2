@@ -50,7 +50,7 @@
                     </a>
                 </div>
                 <ul class="nav">
-                    <li class="nav-item active">
+                    <li class="nav-item ">
                         <a class="nav-link" href="contactus">
                             <i class="nc-icon nc-notes"></i>
                             <p>Contact Us</p>
@@ -68,24 +68,7 @@
                             <p>Upload Images</p>
                         </a>
                     </li>
-                    <li>
-                        <a class="nav-link" href="interiordesigningupload">
-                            <i class="nc-icon nc-cloud-upload-94"></i>
-                            <p>Interior Designing </p>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="interiorproductupload">
-                            <i class="nc-icon nc-cloud-upload-94"></i>
-                            <p>Interior Product </p>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="sanitaryupload">
-                            <i class="nc-icon nc-cloud-upload-94"></i>
-                            <p>Sanitary</p>
-                        </a>
-                    </li>
+                    
                     <li>
                         <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();	
                                                      document.getElementById('logout-form').submit();">

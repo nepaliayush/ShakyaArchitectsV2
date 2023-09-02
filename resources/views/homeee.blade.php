@@ -83,8 +83,9 @@ window.addEventListener("scroll", () => {
     </div> -->
     <!-- main -->
     <div id="sidebarBackdrop" class="fixed inset-0 bg-black opacity-50 z-30 hidden"></div>
-    <div class="flex items-center">
-        <h1 class="text-2xl font-semibold">Shakya Architects</h1>
+    <div class="flex items-center justify-between m-5  md:absolute top-0 left-0">
+        <img class=" w-10 h-10"src="/images/logo.png" alt="" srcset="">
+        <h1 class="text-2xl ">Shakya Architects</h1>
         <button id="openSidebarBtn"
             class="ml-3 p-2 text-gray-500 rounded-lg sm:hidden focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
             <span class="sr-only">Open sidebar</span>
@@ -272,7 +273,7 @@ window.addEventListener("scroll", () => {
                 @foreach (explode(',', $item->thumbnail) as $path)
                 <div class="w-full px-4">
                     <div class="group relative overflow-hidden ">
-                        <a href="projectgallery/{{ $item->id }}">
+                        <a href="projectgallery/architecture/{{ $item->id }}">
                             <img class="w-full h-auto md:w-35vw >" src="{{ asset($path) }}" alt="">
                         </a>
                         <p class="mt-2 mb-0 text-center">{{ $item->project_name }}</p>
@@ -297,7 +298,7 @@ window.addEventListener("scroll", () => {
                 @foreach (explode(',', $item->thumbnail) as $path)
                 <div class="w-full px-4">
                     <div class="group relative overflow-hidden ">
-                        <a href="projectgallery/{{$item->id}}">
+                        <a href="projectgallery/interiordesigning/{{$item->id}}">
                             <img class="w-full h-auto md:w-35vw " src="{{ asset($path) }}" alt="">
                         </a>
                         <p class="mt-2 mb-0 text-center">{{ $item->project_name }}</p>
@@ -313,7 +314,7 @@ window.addEventListener("scroll", () => {
             <p class=" m-5 text-end"><a href="interiordesigning"> See more</a></p>
 
 
-
+<!-- 
             <div class="m-5">
                 <p>Interior</p>
             </div>
@@ -322,7 +323,7 @@ window.addEventListener("scroll", () => {
                 <div>
                     <p><a href="architecture"> See more</a></p>
                 </div>
-            </div>
+            </div> -->
 
         </section>
         <section id="services">
@@ -444,8 +445,8 @@ window.addEventListener("scroll", () => {
 
                 </div>
             </div>
-    </div>
-    </div>
+  
+            </div>
     </section>
     <section id="booking">
 
@@ -581,6 +582,8 @@ window.addEventListener("scroll", () => {
         </div>
         </div>
     </section>
+
+<!--     
     <section id="team"class="bg-white dark:bg-gray-900">
   <div class="py-8 px-4 mx-auto md:ml-64 max-w-screen-xl text-center lg:py-16 lg:px-6">
       <div class="mx-auto mb-8 max-w-screen-sm lg:mb-16">
@@ -822,12 +825,12 @@ window.addEventListener("scroll", () => {
           </div>
       </div>  
   </div>
-</section>                   
+</section>                    -->
     <section id="socials">
         <div class="aspect-ratio md:ml-64  flex flex-col  p-3 md:flex-row mt-5 ">
             <div class="w-full f-full">
                 <h2 class="text-2xl font-semibold text-center mt-5"> Our Socials</h2>
-                <img class="h-auto w-auto" src="images/socials.jpg" alt="">
+                <img class="h-auto w-auto" src="images/social.jpg" alt="">
                 <ul class="flex justify-center text-xl mt-3 space-x-6">
                     <li>
                         <a href="https://www.facebook.com/shakyaarchi" class="text-black hover:text-blue-500">
@@ -855,7 +858,7 @@ window.addEventListener("scroll", () => {
 
         </div>
     </section>
- 
+
 </body>
 
 </div>

@@ -28,7 +28,7 @@ class UserController extends Controller
     $userStore->phone=$request->phone;
     $userStore->message =$request->message;
     $userStore->save();
-   Alert::html('Message Sent Sucessfuly','We have received your message');
+    alert()->success('Message Sent Sucessfuly','We have received your message');
     //toast('Your Post as been submited!','success');
     return redirect('/')->with('toast_success', 'Login Successfully!');
 

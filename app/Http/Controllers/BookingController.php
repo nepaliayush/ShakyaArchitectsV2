@@ -33,8 +33,8 @@ class BookingController extends Controller
         $bookings->message =$request->message;
         $bookings->status =$request->status;
         $bookings->save();
-        Alert::html('&#10003;<br>Booking Done Successfully','We have added your booking');
-        return view('landing');
+        alert()->success('Booking Done Successfully','We have added your booking');
+        return redirect()->back();
         // return redirect()->back();
 
     }

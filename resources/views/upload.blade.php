@@ -11,7 +11,7 @@ Dashboard
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title"> Upload</h4>
+                        <h4 class="card-title"> Upload Images</h4>
                     </div>
                     <div class="card-body">
                         <form method="POST" action="/upload/upload" enctype="multipart/form-data">
@@ -27,7 +27,7 @@ Dashboard
 
 
                                             Details: <br> <input type="text" name="details"> <br>
-                                            <select name="service" id="table">
+                                            Projects:<select name="service" id="table">
                                                 <option value="architecture">Architecture</option>
                                                 <option value="interiordesigning">Interior Designing</option>
                                                 <option value="interiorproducts">Interior </option>

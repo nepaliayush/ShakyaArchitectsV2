@@ -46,6 +46,9 @@ Route::get('dashboard', function () {
 Route::get('upload', function () {
     return view('upload');
 })->middleware('auth');
+Route::get('addteam', function () {
+    return view('addteam');
+});
 Route::get('architectureupload', function () {
     return view('architectureupload');
 })->middleware('auth');
