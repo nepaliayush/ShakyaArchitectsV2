@@ -8,7 +8,7 @@ use App\Models\Architecture;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
-
+use RealRashid\SweetAlert\Facades\Alert;
 class ServiceController extends Controller
 {
     //
@@ -77,6 +77,7 @@ class ServiceController extends Controller
           'image' => implode('|', $image),
           'thumbnail' => implode('|', $thumbnail),
         ]);
+        alert()->success('Images Uploaded Successfully','We have posted the images');
         break;
 
     case 'interiordesigning':
@@ -106,8 +107,12 @@ class ServiceController extends Controller
     // Add cases for other tables
     default:
         // Handle invalid table selection
-        return redirect()->back()->with('error', 'Invalid table selection.');
+       
 }
+Alert::success('Project Uploaded Sucessfully','The image have been posted in website');
+return  redirect()->back();
+
+  }
   // InteriorDesigning::insert([
       
   //     'project_name'=>$request->project_name,
@@ -124,7 +129,7 @@ class ServiceController extends Controller
   //       'thumbnail' => implode('|', $thumbnail),
   //   ]);
   //       return back() ;
-  }
+  
   
   
   public function getArchitectureThumbnail(){

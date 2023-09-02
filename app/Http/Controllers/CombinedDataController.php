@@ -13,7 +13,7 @@ class CombinedDataController extends Controller
 {
     public function showCombinedData()
     {
-        $interiordesigning = InteriorDesigning::whereIn('id', [1, 2, 3, 4, 5, 6])->get();
+        $interiordesigning = InteriorDesigning::whereIn('id', [1, 2, 3])->get();
         $architecture = Architecture::whereIn('id', [1, 2, 3])->get();
         $youtubeController = new YoutubeController();
         $youtubeData = $youtubeController->fetchVideos();
