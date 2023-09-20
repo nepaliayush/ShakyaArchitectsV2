@@ -69,6 +69,12 @@
                             <p>Upload Images</p>
                         </a>
                     </li>
+                    <li>
+                        <a class="nav-link" href="addteam">
+                            <i class="nc-icon nc-circle-09"></i>
+                            <p>Add Team</p>
+                        </a>
+                    </li>
                     
                     <li>
                         <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();	

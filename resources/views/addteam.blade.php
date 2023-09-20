@@ -23,19 +23,20 @@ Dashboard
                                     <div class="form-item">
                                         <p>
 
-                                            Name:<br> <input type="text" name="project_name"> <br>
-
-
-                                            Details: <br> <input type="text" name="details"> <br>
-                                            <select name="service" id="table">
-                                                <option value="architecture">Architecture</option>
-                                                <option value="interiordesigning">Interior Designing</option>
-                                                <option value="interiorproducts">Interior </option>
-                                                <option value="sanitary">Sanitary</option>
-                                                <!-- Add more options for other tables -->
-                                            </select>
-                                            Upload Picture: <br> <input type="file" name="thumbnail[]" id=""> <br>
-                                            Choose File: <br> <input type="file" name="image[]" id="" multiple> <br>
+                                            Name:<br> <input type="text" name="name"> <br>
+                                            Job Title:<br> <input type="text" name="job_title"> <br>
+                                            Phone Number:<br> <input type="text" name="phone"> <br>
+                                            Email:<br> <input type="text" name="email"> <br>
+                                            Location:<br> <input type="text" name="location"> <br>
+                                            About me: <br> <input type="text" name="about_me"> <br>
+                                          
+                                            
+                                           
+                                           <legend>Socials</legend>
+                                           Facebook: <br> <input type="url" name="facebook"><br>
+                                           Instagram: <br> <input type="url" name="instagram"><br>
+                                           Linkedin: <br> <input type="url" name="linkedin"><br>
+                                           Upload Picture: <br> <input type="file" name="picture[]" id=""> <br>
                                             <button type="submit"
                                                 class="btn btn-info btn-fill pull-right">Upload</button>
 

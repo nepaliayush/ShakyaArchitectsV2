@@ -11,6 +11,7 @@ use App\Http\Controllers\InteriorDesigningController;
 use App\Http\Controllers\YoutubeController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CombinedDataController;
+use App\Http\Controllers\TeamController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -107,5 +108,5 @@ Route::get('/', [CombinedDataController::class, 'showCombinedData'])->name('home
 
 Route::get('homeee', [CombinedDataController::class, 'showCombinedData'])->name('homee');
 
-
+Route::post('/uploadteam/upload',[TeamController::class,'addTeam'])->name('upload')->middleware('auth');
 }); 
