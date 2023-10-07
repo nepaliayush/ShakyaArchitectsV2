@@ -38,6 +38,10 @@ Route::get('projectgallery', function () {
     return view('projectgallery');
 
 });
+Route::get('profile', function () {
+    return view('profile');
+
+});
 
 
 Route::get('dashboard', function () {
@@ -99,7 +103,7 @@ Route::group(['middleware'=>"web"],function(){
    Route::get('/projectgallery/interiordesigning/{id}', [ServiceController::class, 'getInteriorDesigning'])->name('interiorimage');
  Route::get('/projectgallery/architecture/{id}', [ServiceController::class, 'getArchitecture'])->name('architectureimage');
 
-
+ Route::get('/profile/{id}', [TeamController::class, 'getTeam'])->name('team');
 
 // Route::get('/homee', [YoutubeController::class, 'fetchVideos']);
 //  Route::get('/homee', [InteriorDesigningController::class, 'getprojects'])->name('image');

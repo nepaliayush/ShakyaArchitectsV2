@@ -37,4 +37,10 @@ class TeamController extends Controller
         alert()->success('Booking Done Successfully','We have added your booking');
         return redirect()->back();
     }
+    public function getTeam($id){
+        $data = DB::table('team')->where('id', $id)->select('picture','job_title', 'name', 'phone' ,'email','about_me','location','facebook','instagram','linkedin')->get();
+        return view('profile', compact('data'));
+    }
+    
+      
 }
