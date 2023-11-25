@@ -21,7 +21,7 @@ class TeamController extends Controller
             $thumbnail[] = $image_url;
         }
         }
-        DB::table('team')->insert([
+        DB::table('teams')->insert([
             'name'=>$request->name,
             'job_title'=>$request->job_title,
             'phone'=>$request->phone,
@@ -38,7 +38,7 @@ class TeamController extends Controller
         return redirect()->back();
     }
     public function getTeam($id){
-        $data = DB::table('team')->where('id', $id)->select('picture','job_title', 'name', 'phone' ,'email','about_me','location','facebook','instagram','linkedin')->get();
+        $data = DB::table('teams')->where('id', $id)->select('picture','job_title', 'name', 'phone' ,'email','about_me','location','facebook','instagram','linkedin')->get();
         return view('profile', compact('data'));
     }
     

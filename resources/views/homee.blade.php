@@ -11,7 +11,6 @@
     <title>Shakya Architects</title>
 
 </head>
-
 <body>]
 
     @include('sweetalert::alert')
@@ -51,8 +50,6 @@
                     <div class="swiper-slide">Slide 9</div>
 
                 </div>
-
-
                 <!-- If we need navigation buttons -->
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
